@@ -21,7 +21,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .page{display:none;}
 .page.active{display:block;}
 
-/* ── HERO COM BANNER ─────────────────────────────── */
+/* HERO */
 .hero{
   position:relative;
   min-height:320px;
@@ -52,17 +52,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
   z-index:1;
   max-width:560px;
 }
-.hero-logo{
-  width:66px;height:66px;
-  background:rgba(0,0,0,0.5);
-  border:2px solid rgba(255,255,255,0.2);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:16px;
-  box-shadow:0 0 24px rgba(217,30,30,0.4);
-  overflow:hidden;
-}
-.hero-logo img{width:50px;object-fit:contain;}
 .hero h1{
   font-size:36px;font-weight:900;
   line-height:1.15;
@@ -91,7 +80,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
   backdrop-filter:blur(4px);
 }
 
-/* ── CARDS IDENTIDADE ────────────────────────────── */
+/* IDENTITY CARDS */
 .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
 .icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
 .icard:hover{transform:translateY(-4px);}
@@ -111,75 +100,46 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
-/* ── LINHA DOS NÚCLEOS (título + botão novo) ─────── */
+/* NUCLEOS HEADER */
 .nucleos-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 36px 16px;
-  max-width:1200px;
-  margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 36px 16px;max-width:1200px;margin:0 auto;
 }
 .nucleos-header h3{font-size:14px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:2px;}
 .btn-novo-nucleo{
-  background:var(--red);
-  color:white;
-  border:none;
-  padding:9px 20px;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:13px;
-  font-weight:700;
-  font-family:inherit;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  transition:all 0.2s;
-  box-shadow:0 4px 12px rgba(217,30,30,0.3);
+  background:var(--red);color:white;border:none;
+  padding:9px 20px;border-radius:8px;cursor:pointer;
+  font-size:13px;font-weight:700;font-family:inherit;
+  display:flex;align-items:center;gap:8px;
+  transition:all 0.2s;box-shadow:0 4px 12px rgba(217,30,30,0.3);
 }
 .btn-novo-nucleo:hover{background:#b51818;transform:translateY(-1px);}
 
-/* ── MODAL NOVO NÚCLEO ───────────────────────────── */
+/* MODAL */
 .modal-overlay{
-  position:fixed;inset:0;
-  background:rgba(0,0,0,0.6);
-  z-index:200;
-  display:none;
-  align-items:center;
-  justify-content:center;
+  position:fixed;inset:0;background:rgba(0,0,0,0.6);
+  z-index:200;display:none;align-items:center;justify-content:center;
   backdrop-filter:blur(3px);
 }
 .modal-overlay.open{display:flex;}
 .modal{
-  background:white;
-  border-radius:var(--radius);
-  padding:32px;
-  width:100%;
-  max-width:440px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.3);
-  position:relative;
+  background:white;border-radius:var(--radius);padding:32px;
+  width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;
 }
-.modal h4{
-  font-size:18px;font-weight:800;
-  color:var(--dark);margin-bottom:4px;
-}
-.modal p{font-size:13px;color:#aaa;margin-bottom:24px;}
+.modal h4{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px;}
+.modal>p{font-size:13px;color:#aaa;margin-bottom:24px;}
 .modal-close{
-  position:absolute;top:16px;right:16px;
-  background:var(--gray);border:none;
-  width:32px;height:32px;border-radius:50%;
-  cursor:pointer;font-size:16px;
-  display:flex;align-items:center;justify-content:center;
-  transition:all 0.2s;
+  position:absolute;top:16px;right:16px;background:var(--gray);border:none;
+  width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;
+  display:flex;align-items:center;justify-content:center;transition:all 0.2s;
 }
 .modal-close:hover{background:var(--red);color:white;}
 .modal .field{display:flex;flex-direction:column;gap:4px;margin-bottom:14px;}
 .modal .field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 .modal .field input,.modal .field textarea,.modal .field select{
-  border:1px solid var(--mid);border-radius:6px;
-  padding:9px 12px;font-size:13px;color:#333;
-  background:white;font-family:inherit;outline:none;
-  transition:border-color 0.2s;resize:none;
+  border:1px solid var(--mid);border-radius:6px;padding:9px 12px;
+  font-size:13px;color:#333;background:white;font-family:inherit;
+  outline:none;transition:border-color 0.2s;resize:none;
 }
 .modal .field input:focus,.modal .field textarea:focus,.modal .field select:focus{border-color:var(--red);}
 .modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;}
@@ -196,7 +156,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 }
 .btn-criar:hover{background:var(--red);}
 
-/* ── CARDS NÚCLEOS ───────────────────────────────── */
+/* NUCLEO CARDS */
 .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:0 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
@@ -211,27 +171,17 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prog-label{font-size:10px;color:#aaa;margin-top:3px;text-align:right;}
 .lider-chip{font-size:11px;color:#888;margin-top:2px;margin-bottom:6px;}
 .lider-chip strong{color:var(--red);}
-
-/* card de novo núcleo (placeholder) */
 .ncard-novo{
-  background:white;
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
-  border:2px dashed #ddd;
-  display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  text-align:center;
-  cursor:pointer;
-  transition:all 0.2s;
-  min-height:180px;
-  color:#bbb;
+  background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
+  border:2px dashed #ddd;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  cursor:pointer;transition:all 0.2s;min-height:180px;color:#bbb;
 }
 .ncard-novo:hover{border-color:var(--red);color:var(--red);}
 .ncard-novo .plus{font-size:36px;margin-bottom:8px;}
 .ncard-novo span{font-size:13px;font-weight:600;}
 
-/* ── PÁGINA INTERNA ──────────────────────────────── */
+/* NUCLEO PAGE */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
 .breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
 .breadcrumb span{cursor:pointer;transition:color 0.2s;}
@@ -244,13 +194,12 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 
 .ncontent{padding:32px 24px;max-width:1180px;margin:0 auto;}
 
-/* ── FICHA ───────────────────────────────────────── */
+/* FICHA */
 .ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
 .ficha-header{background:var(--dark);color:white;padding:16px 22px;}
 .ficha-header h4{font-size:14px;font-weight:700;}
 .ficha-header p{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;}
 .ficha-body{padding:26px;}
-
 .fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
 .fcol{display:flex;flex-direction:column;gap:16px;}
 .fsec h5{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--red);}
@@ -291,7 +240,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .obs-meta strong{color:var(--dark);font-size:11px;}
 .obs-prob{font-size:12px;color:#555;margin-bottom:5px;}
 .obs-sol{background:#f0fff4;border-left:3px solid #28a745;padding:5px 10px;border-radius:0 5px 5px 0;font-size:11px;color:#155724;}
-
 .obs-form{background:var(--gray);border-radius:8px;padding:14px;margin-top:10px;}
 .obs-form h6{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
 .obs-form .orow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
@@ -346,7 +294,7 @@ footer span{color:var(--red);}
   </div>
 </div>
 
-<div class="toast" id="toast">✅ Ficha salva!</div>
+<div class="toast" id="toast">✅ Salvo!</div>
 
 <header>
   <div class="logo-area">
@@ -367,7 +315,6 @@ footer span{color:var(--red);}
 
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-logo"><img src="logo-lr.png" alt="LR"/></div>
       <h1>Cultura <span>LR Marketing</span></h1>
       <p>Pessoas em movimento, olhares para o futuro e uma cultura viva que conecta propósito, entrega e crescimento.</p>
       <div class="badge">✦ Ser Foda é sobre Gente · Futuro · Ação ✦</div>
@@ -392,7 +339,6 @@ footer span{color:var(--red);}
   </div>
 
   <div class="ngrid" id="ngrid-home">
-
     <div class="ncard" onclick="goPage('ai')">
       <div class="nico">🤖</div><h3>Núcleo AI</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-ai">A definir</strong></div>
@@ -404,7 +350,6 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-ai" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-ai">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('digital')">
       <div class="nico">📱</div><h3>Digital LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-digital">A definir</strong></div>
@@ -416,7 +361,6 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-digital" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-digital">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('insight')">
       <div class="nico">💡</div><h3>Insight LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-insight">A definir</strong></div>
@@ -428,7 +372,6 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-insight" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-insight">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('processo')">
       <div class="nico">⚙️</div><h3>Processo | Comunicação</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-processo">A definir</strong></div>
@@ -440,14 +383,12 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-processo" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-processo">0% concluído</div>
     </div>
-
-    <!-- card placeholder -->
     <div class="ncard-novo" onclick="openModal()">
       <div class="plus">＋</div>
       <span>Criar novo núcleo</span>
     </div>
-
   </div>
+
 </div>
 
 <!-- NUCLEO AI -->
@@ -779,7 +720,6 @@ function addObs(listId,btn){
   txts.forEach(t=>t.value='');inps.forEach(i=>i.value='');
 }
 
-// ── MODAL NOVO NÚCLEO ──────────────────────────────
 function openModal(){
   document.getElementById('modal-nucleo').classList.add('open');
 }
@@ -792,11 +732,7 @@ function closeModal(){
   document.getElementById('novo-status').value='formacao';
 }
 
-const statusLabel={
-  formacao:'🟡 Em formação',
-  andamento:'🟢 Em andamento',
-  planejado:'🔵 Planejado'
-};
+const statusLabel={formacao:'🟡 Em formação',andamento:'🟢 Em andamento',planejado:'🔵 Planejado'};
 
 function criarNucleo(){
   const nome=document.getElementById('novo-nome').value.trim();
@@ -804,12 +740,10 @@ function criarNucleo(){
   const desc=document.getElementById('novo-desc').value.trim()||'Núcleo em estruturação.';
   const lider=document.getElementById('novo-lider').value.trim()||'A definir';
   const status=document.getElementById('novo-status').value;
-
   if(!nome){alert('Informe o nome do núcleo.');return;}
 
   const grid=document.getElementById('ngrid-home');
   const placeholder=grid.querySelector('.ncard-novo');
-
   const card=document.createElement('div');
   card.className='ncard';
   card.innerHTML=`
@@ -821,19 +755,41 @@ function criarNucleo(){
       <div class="sbadge"><strong>0</strong>Checklist</div>
       <div class="sbadge"><strong>0</strong>Equipe</div>
     </div>
-    <div style="margin-top:8px">
-      <span style="font-size:11px;color:#888;">${statusLabel[status]}</span>
-    </div>
+    <div style="margin-top:8px"><span style="font-size:11px;color:#888;">${statusLabel[status]}</span></div>
     <div class="prog" style="margin-top:8px"><div class="prog-fill" style="width:0%"></div></div>
     <div class="prog-label">0% concluído</div>
   `;
-
   grid.insertBefore(card,placeholder);
 
-  const nucleosExtras=JSON.parse(localStorage.getItem('nucleos-extras')||'[]');
-  nucleosExtras.push({nome,icone,desc,lider,status});
-  localStorage.setItem('nucleos-extras',JSON.stringify(nucleosExtras));
+  const extras=JSON.parse(localStorage.getItem('nucleos-extras')||'[]');
+  extras.push({nome,icone,desc,lider,status});
+  localStorage.setItem('nucleos-extras',JSON.stringify(extras));
 
   closeModal();
-  showToast2('✅ Núcleo "'+nome+'"
+  showToast();
+}
+
+function saveFicha(id){
+  const data={
+    nome:document.getElementById('f-'+id+'-nome').value,
+    lider:document.getElementById('f-'+id+'-lider').value,
+    obj:document.getElementById('f-'+id+'-obj').value,
+    inicio:document.getElementById('f-'+id+'-inicio').value,
+    prazo:document.getElementById('f-'+id+'-prazo').value,
+    pct:document.getElementById('range-'+id).value,
+    coment:document.getElementById('f-'+id+'-coment').value,
+    team:[],check:[],rec:[]
+  };
+  document.querySelectorAll('#team-'+id+' tbody tr').forEach(tr=>{
+    const c=tr.querySelectorAll('td');
+    if(c.length>=2)data.team.push({nome:c[0].querySelector('input').value,papel:c[1].querySelector('input').value});
+  });
+  document.querySelectorAll('#proj-'+id+' tbody tr').forEach(tr=>{
+    const c=tr.querySelectorAll('td');
+    if(c.length>=4)data.check.push({done:c[0].querySelector('input').checked,tarefa:c[1].querySelector('input').value,resp:c[2].querySelector('input').value,prazo:c[3].querySelector('input').value});
+  });
+  document.querySelectorAll('#rec-'+id+' tbody tr').forEach(tr=>{
+    const c=tr.querySelectorAll('td');
+    if(c.length>=2)data.rec.push({nome:c[0].querySelector('input').value,status:c[1].querySelector('select').value});
+  });
 
