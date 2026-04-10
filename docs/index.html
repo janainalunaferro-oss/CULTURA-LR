@@ -21,6 +21,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .page{display:none;}
 .page.active{display:block;}
 
+/* HERO */
 .hero{position:relative;min-height:320px;color:#fff;display:flex;align-items:center;justify-content:flex-start;padding:60px;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:url('banner.png') center center / cover no-repeat;filter:brightness(0.72);z-index:0;}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0) 100%);z-index:0;}
@@ -30,6 +31,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .hero p{font-size:15px;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:22px;text-shadow:0 1px 6px rgba(0,0,0,0.5);max-width:460px;}
 .badge{display:inline-block;background:rgba(0,0,0,0.65);color:#ffd166;font-size:11px;font-weight:700;padding:7px 20px;border-radius:999px;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,209,102,0.35);backdrop-filter:blur(4px);}
 
+/* IDENTIDADE */
 .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
 .icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
 .icard:hover{transform:translateY(-4px);}
@@ -44,7 +46,8 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prop-text{color:white;font-size:26px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
 .icard-dark p{color:rgba(255,255,255,0.4);font-size:12px;}
 
-.sec-title{text-align:center;padding:44px 36px 16px;}
+/* Título núcleos */
+.sec-title{text-align:center;padding:44px 36px 8px;}
 .sec-title h2{font-size:26px;font-weight:800;color:var(--dark);}
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
@@ -54,6 +57,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .btn-novo-nucleo{background:var(--red);color:white;border:none;padding:9px 20px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;font-family:inherit;display:flex;align-items:center;gap:8px;transition:all 0.2s;box-shadow:0 4px 12px rgba(217,30,30,0.3);}
 .btn-novo-nucleo:hover{background:#b51818;transform:translateY(-1px);}
 
+/* MODAL NOVO NÚCLEO */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(3px);}
 .modal-overlay.open{display:flex;}
 .modal{background:white;border-radius:var(--radius);padding:32px;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;}
@@ -71,6 +75,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .btn-criar{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;font-family:inherit;transition:all 0.2s;}
 .btn-criar:hover{background:var(--red);}
 
+/* CARDS NÚCLEO */
 .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:0 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
@@ -90,6 +95,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .ncard-novo .plus{font-size:36px;margin-bottom:8px;}
 .ncard-novo span{font-size:13px;font-weight:600;}
 
+/* PÁGINAS DE NÚCLEO */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
 .breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
 .breadcrumb span{cursor:pointer;transition:color 0.2s;}
@@ -102,6 +108,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 
 .ncontent{padding:32px 24px;max-width:1180px;margin:0 auto;}
 
+/* FICHAS */
 .ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
 .ficha-header{background:var(--dark);color:white;padding:16px 22px;}
 .ficha-header h4{font-size:14px;font-weight:700;}
@@ -115,6 +122,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .field input,.field textarea,.field select{border:1px solid var(--mid);border-radius:6px;padding:7px 10px;font-size:13px;color:#333;background:white;font-family:inherit;outline:none;transition:border-color 0.2s;resize:none;}
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+
 .dtable{width:100%;border-collapse:collapse;font-size:12px;}
 .dtable th{background:var(--dark);color:white;padding:8px 10px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
 .dtable td{padding:5px 4px;border-bottom:1px solid var(--mid);}
@@ -124,9 +132,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .btn-rm{background:#fee;border:1px solid #fdd;color:var(--red);border-radius:4px;padding:3px 7px;cursor:pointer;font-size:11px;font-family:inherit;}
 .btn-add-row{background:var(--gray);border:1px dashed #ccc;color:#666;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-family:inherit;margin-top:6px;transition:all 0.2s;width:100%;text-align:center;}
 .btn-add-row:hover{border-color:var(--red);color:var(--red);}
-.s-ok{background:#d4edda;color:#155724;}
-.s-att{background:#fff3cd;color:#856404;}
-.s-no{background:#f8d7da;color:#721c24;}
+
 .term-wrap{background:var(--gray);border-radius:10px;padding:16px;display:flex;align-items:center;gap:16px;margin-bottom:10px;}
 .term-num{font-size:44px;font-weight:900;color:var(--dark);min-width:80px;text-align:center;}
 .term-num small{font-size:16px;color:#aaa;}
@@ -134,6 +140,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .term-bar{height:14px;background:var(--mid);border-radius:10px;overflow:hidden;margin-bottom:8px;}
 .term-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--red),#ff6b6b);transition:width 0.5s;}
 .term-area input[type=range]{width:100%;accent-color:var(--red);}
+
 .obs-list{position:relative;padding-left:18px;margin-bottom:12px;}
 .obs-list::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:2px;background:var(--mid);}
 .obs-item{position:relative;margin-bottom:12px;background:white;border:1px solid var(--mid);border-radius:8px;padding:12px 14px;}
@@ -145,13 +152,16 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .obs-form{background:var(--gray);border-radius:8px;padding:14px;margin-top:10px;}
 .obs-form h6{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
 .obs-form .orow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
+
 .ficha-footer{padding:0 26px 26px;display:flex;justify-content:flex-end;gap:10px;}
 .btn-save{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-save:hover{background:var(--red);}
 .btn-print{background:var(--gray);color:var(--dark);border:1px solid var(--mid);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-print:hover{border-color:var(--red);color:var(--red);}
+
 .toast{position:fixed;bottom:28px;right:28px;background:#155724;color:white;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:999;}
 .toast.show{opacity:1;}
+
 footer{background:var(--dark);color:rgba(255,255,255,0.4);text-align:center;padding:20px;font-size:11px;margin-top:50px;}
 footer span{color:var(--red);}
 
@@ -169,6 +179,7 @@ footer span{color:var(--red);}
 </head>
 <body>
 
+<!-- MODAL NOVO NÚCLEO -->
 <div class="modal-overlay" id="modal-nucleo">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -247,6 +258,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-ai" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-ai">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('digital',null)">
       <div class="nico">📱</div><h3>Digital LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-digital">A definir</strong></div>
@@ -258,6 +270,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-digital" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-digital">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('insight',null)">
       <div class="nico">💡</div><h3>Insight LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-insight">A definir</strong></div>
@@ -269,6 +282,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-insight" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-insight">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('processo',null)">
       <div class="nico">⚙️</div><h3>Processo | Comunicação</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-processo">A definir</strong></div>
@@ -280,6 +294,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-processo" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-processo">0% concluído</div>
     </div>
+
     <div class="ncard-novo" onclick="openModal()">
       <div class="plus">＋</div>
       <span>Criar novo núcleo</span>
@@ -287,7 +302,8 @@ footer span{color:var(--red);}
   </div>
 </div>
 
-<!-- NUCLEO AI -->
+<!-- PÁGINAS DOS NÚCLEOS -->
+<!-- AI -->
 <div id="page-ai" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Núcleo AI</div>
@@ -323,17 +339,23 @@ footer span{color:var(--red);}
           </div>
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-ai"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="team-ai"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addTeam('team-ai')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Checklist</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-ai"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="proj-ai"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addChecklist('proj-ai')">+ Adicionar item</button>
             </div>
           </div>
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-ai"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="rec-ai"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addRec('rec-ai')">+ Adicionar recurso</button>
             </div>
             <div class="fsec"><h5>5. Observações</h5>
@@ -348,7 +370,10 @@ footer span{color:var(--red);}
           </div>
         </div>
       </div>
-      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('ai')">💾 Salvar Ficha</button></div>
+      <div class="ficha-footer">
+        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="btn-save" onclick="saveFicha('ai')">💾 Salvar Ficha</button>
+      </div>
     </div>
   </div>
 </div>
@@ -366,6 +391,7 @@ footer span{color:var(--red);}
       <div class="ficha-header"><h4>📋 Ficha do Núcleo Digital LR</h4><p>Preencha e clique em Salvar — o dashboard da home atualiza automaticamente.</p></div>
       <div class="ficha-body">
         <div class="fgrid">
+          <!-- coluna 1 -->
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" id="f-digital-nome" value="Digital LR"/></div>
@@ -387,19 +413,27 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" id="f-digital-coment" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+          <!-- coluna 2 -->
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-digital"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="team-digital"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addTeam('team-digital')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Checklist</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-digital"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="proj-digital"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addChecklist('proj-digital')">+ Adicionar item</button>
             </div>
           </div>
+          <!-- coluna 3 -->
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-digital"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="rec-digital"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addRec('rec-digital')">+ Adicionar recurso</button>
             </div>
             <div class="fsec"><h5>5. Observações</h5>
@@ -414,12 +448,15 @@ footer span{color:var(--red);}
           </div>
         </div>
       </div>
-      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('digital')">💾 Salvar Ficha</button></div>
+      <div class="ficha-footer">
+        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="btn-save" onclick="saveFicha('digital')">💾 Salvar Ficha</button>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- INSIGHT LR -->
+<!-- INSIGHT -->
 <div id="page-insight" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Insight LR</div>
@@ -432,6 +469,7 @@ footer span{color:var(--red);}
       <div class="ficha-header"><h4>📋 Ficha do Núcleo Insight LR</h4><p>Preencha e clique em Salvar — o dashboard da home atualiza automaticamente.</p></div>
       <div class="ficha-body">
         <div class="fgrid">
+          <!-- colunas iguais às anteriores, mudando ids para insight -->
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" id="f-insight-nome" value="Insight LR"/></div>
@@ -453,19 +491,27 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" id="f-insight-coment" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-insight"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="team-insight"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addTeam('team-insight')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Checklist</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-insight"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="proj-insight"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addChecklist('proj-insight')">+ Adicionar item</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-insight"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="rec-insight"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addRec('rec-insight')">+ Adicionar recurso</button>
             </div>
             <div class="fsec"><h5>5. Observações</h5>
@@ -478,9 +524,13 @@ footer span{color:var(--red);}
               </div>
             </div>
           </div>
+
         </div>
       </div>
-      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('insight')">💾 Salvar Ficha</button></div>
+      <div class="ficha-footer">
+        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="btn-save" onclick="saveFicha('insight')">💾 Salvar Ficha</button>
+      </div>
     </div>
   </div>
 </div>
@@ -498,6 +548,7 @@ footer span{color:var(--red);}
       <div class="ficha-header"><h4>📋 Ficha do Núcleo Processo | Comunicação</h4><p>Preencha e clique em Salvar — o dashboard da home atualiza automaticamente.</p></div>
       <div class="ficha-body">
         <div class="fgrid">
+          <!-- similar aos anteriores, ids com processo -->
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" id="f-processo-nome" value="Processo | Comunicação"/></div>
@@ -519,19 +570,27 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" id="f-processo-coment" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-processo"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="team-processo"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addTeam('team-processo')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Checklist</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-processo"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="proj-processo"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addChecklist('proj-processo')">+ Adicionar item</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-processo"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
+              <div style="overflow-x:auto">
+                <table class="dtable" id="rec-processo"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table>
+              </div>
               <button class="btn-add-row" onclick="addRec('rec-processo')">+ Adicionar recurso</button>
             </div>
             <div class="fsec"><h5>5. Observações</h5>
@@ -544,9 +603,13 @@ footer span{color:var(--red);}
               </div>
             </div>
           </div>
+
         </div>
       </div>
-      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('processo')">💾 Salvar Ficha</button></div>
+      <div class="ficha-footer">
+        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
+        <button class="btn-save" onclick="saveFicha('processo')">💾 Salvar Ficha</button>
+      </div>
     </div>
   </div>
 </div>
@@ -614,14 +677,10 @@ function addObs(listId,btn){
   item.className='obs-item';
   item.innerHTML='<div class="obs-meta"><strong>'+resp+'</strong> · '+data+'</div><div class="obs-prob">⚠️ '+prob+'</div>'+(sol?'<div class="obs-sol">✅ '+sol+'</div>':'');
   list.appendChild(item);
-  txts.forEach(t=>t.value='');
-  inps.forEach(i=>i.value='');
+  txts.forEach(t=>t.value='');inps.forEach(i=>i.value='');
 }
 
-function openModal(){
-  document.getElementById('modal-nucleo').classList.add('open');
-}
-
+function openModal(){document.getElementById('modal-nucleo').classList.add('open');}
 function closeModal(){
   document.getElementById('modal-nucleo').classList.remove('open');
   document.getElementById('novo-nome').value='';
@@ -683,5 +742,89 @@ function saveFicha(id){
     if(c.length>=4)data.check.push({done:c[0].querySelector('input').checked,tarefa:c[1].querySelector('input').value,resp:c[2].querySelector('input').value,prazo:c[3].querySelector('input').value});
   });
   document.querySelectorAll('#rec-'+id+' tbody tr').forEach(tr=>{
-    const c=tr.querySelector
+    const c=tr.querySelectorAll('td');
+    if(c.length>=2)data.rec.push({nome:c[0].querySelector('input').value,status:c[1].querySelector('select').value});
+  });
+  localStorage.setItem('nucleo-'+id,JSON.stringify(data));
+  updateDash();
+  showToast();
+}
 
+function loadFicha(id){
+  const raw=localStorage.getItem('nucleo-'+id);
+  if(!raw)return;
+  const d=JSON.parse(raw);
+  document.getElementById('f-'+id+'-nome').value=d.nome||'';
+  document.getElementById('f-'+id+'-lider').value=d.lider||'';
+  document.getElementById('f-'+id+'-obj').value=d.obj||'';
+  document.getElementById('f-'+id+'-inicio').value=d.inicio||'';
+  document.getElementById('f-'+id+'-prazo').value=d.prazo||'';
+  document.getElementById('f-'+id+'-coment').value=d.coment||'';
+  const pct=d.pct||0;
+  document.getElementById('range-'+id).value=pct;
+  updT(id,pct);
+
+  const teamTb=document.querySelector('#team-'+id+' tbody');
+  teamTb.innerHTML='';
+  (d.team||[]).forEach(m=>{
+    addTeam('team-'+id);
+    const rows=teamTb.querySelectorAll('tr');
+    const last=rows[rows.length-1].querySelectorAll('td');
+    last[0].querySelector('input').value=m.nome;
+    last[1].querySelector('input').value=m.papel;
+  });
+
+  const projTb=document.querySelector('#proj-'+id+' tbody');
+  projTb.innerHTML='';
+  (d.check||[]).forEach(c=>{
+    addChecklist('proj-'+id);
+    const rows=projTb.querySelectorAll('tr');
+    const last=rows[rows.length-1].querySelectorAll('td');
+    last[0].querySelector('input').checked=c.done;
+    last[1].querySelector('input').value=c.tarefa;
+    last[2].querySelector('input').value=c.resp;
+    last[3].querySelector('input').value=c.prazo;
+  });
+
+  const recTb=document.querySelector('#rec-'+id+' tbody');
+  recTb.innerHTML='';
+  (d.rec||[]).forEach(r=>{
+    addRec('rec-'+id);
+    const rows=recTb.querySelectorAll('tr');
+    const last=rows[rows.length-1].querySelectorAll('td');
+    last[0].querySelector('input').value=r.nome;
+    last[1].querySelector('select').value=r.status;
+  });
+}
+
+function updateDash(){
+  NUCLEOS.forEach(id=>{
+    const raw=localStorage.getItem('nucleo-'+id);
+    if(!raw)return;
+    const d=JSON.parse(raw);
+    const lider=d.lider&&d.lider.trim()?d.lider.trim():'A definir';
+    const nCheck=(d.check||[]).filter(c=>c.tarefa&&c.tarefa.trim()).length;
+    const nTeam=(d.team||[]).filter(t=>t.nome&&t.nome.trim()).length;
+    const pct=d.pct||0;
+    document.getElementById('dash-lider-'+id).textContent=lider;
+    document.getElementById('dash-proj-'+id).textContent=nCheck;
+    document.getElementById('dash-team-'+id).textContent=nTeam;
+    document.getElementById('dash-prog-'+id).style.width=pct+'%';
+    document.getElementById('dash-pct-'+id).textContent=pct+'% concluído';
+  });
+}
+
+function showToast(){
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+window.addEventListener('load',()=>{
+  carregarExtras();
+  NUCLEOS.forEach(id=>loadFicha(id));
+  updateDash();
+});
+</script>
+</body>
+</html>
