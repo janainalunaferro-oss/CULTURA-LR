@@ -21,7 +21,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .page{display:none;}
 .page.active{display:block;}
 
-/* HERO */
 .hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d0a0a 50%,#1a1a1a 100%);color:white;padding:70px 40px 50px;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-50%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(217,30,30,0.15) 0%,transparent 70%);border-radius:50%;}
 .hero-logo{width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 40px rgba(217,30,30,0.4);overflow:hidden;}
@@ -31,7 +30,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .hero p{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;position:relative;z-index:1;}
 .badge{display:inline-block;background:var(--red);color:white;font-size:12px;font-weight:700;padding:6px 22px;border-radius:20px;letter-spacing:3px;text-transform:uppercase;position:relative;z-index:1;}
 
-/* IDENTITY */
 .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
 .icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
 .icard:hover{transform:translateY(-4px);}
@@ -46,13 +44,11 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prop-text{color:white;font-size:26px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
 .icard-dark p{color:rgba(255,255,255,0.4);font-size:12px;}
 
-/* SEC TITLE */
 .sec-title{text-align:center;padding:44px 36px 16px;}
 .sec-title h2{font-size:26px;font-weight:800;color:var(--dark);}
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
-/* NUCLEO CARDS HOME */
 .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:16px 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
@@ -66,7 +62,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prog-fill{height:100%;background:linear-gradient(90deg,var(--red),#ff6b6b);border-radius:10px;transition:width 1.2s ease;}
 .prog-label{font-size:10px;color:#aaa;margin-top:3px;text-align:right;}
 
-/* NUCLEO PAGE */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
 .breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
 .breadcrumb span{cursor:pointer;transition:color 0.2s;}
@@ -77,9 +72,8 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .nmeta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
 .mchip{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:white;padding:5px 14px;border-radius:20px;font-size:11px;}
 
-.ncontent{padding:32px 36px;max-width:1100px;margin:0 auto;}
+.ncontent{padding:32px 24px;max-width:1180px;margin:0 auto;}
 
-/* FICHA */
 .ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
 .ficha-header{background:var(--dark);color:white;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;}
 .ficha-header h4{font-size:14px;font-weight:700;}
@@ -87,19 +81,16 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 
 .ficha-body{padding:26px;}
 
-/* FICHA GRID 3 COLUNAS */
-.fgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;}
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
 .fcol{display:flex;flex-direction:column;gap:16px;}
 .fsec h5{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--red);}
 
-/* CAMPOS */
 .field{display:flex;flex-direction:column;gap:4px;margin-bottom:8px;}
 .field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 .field input,.field textarea,.field select{border:1px solid var(--mid);border-radius:6px;padding:7px 10px;font-size:13px;color:#333;background:white;font-family:inherit;outline:none;transition:border-color 0.2s;resize:none;}
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 
-/* TABELAS */
 .dtable{width:100%;border-collapse:collapse;font-size:12px;}
 .dtable th{background:var(--dark);color:white;padding:8px 10px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
 .dtable td{padding:5px 4px;border-bottom:1px solid var(--mid);}
@@ -109,12 +100,10 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .btn-add-row{background:var(--gray);border:1px dashed #ccc;color:#666;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-family:inherit;margin-top:6px;transition:all 0.2s;width:100%;text-align:center;}
 .btn-add-row:hover{border-color:var(--red);color:var(--red);}
 
-/* STATUS CORES */
 .s-ok{background:#d4edda;color:#155724;}
 .s-att{background:#fff3cd;color:#856404;}
 .s-no{background:#f8d7da;color:#721c24;}
 
-/* TERMOMETRO */
 .term-wrap{background:var(--gray);border-radius:10px;padding:16px;display:flex;align-items:center;gap:16px;margin-bottom:10px;}
 .term-num{font-size:44px;font-weight:900;color:var(--dark);min-width:80px;text-align:center;}
 .term-num small{font-size:16px;color:#aaa;}
@@ -123,7 +112,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .term-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--red),#ff6b6b);transition:width 0.5s;}
 .term-area input[type=range]{width:100%;accent-color:var(--red);}
 
-/* OBS */
 .obs-list{position:relative;padding-left:18px;margin-bottom:12px;}
 .obs-list::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:2px;background:var(--mid);}
 .obs-item{position:relative;margin-bottom:12px;background:white;border:1px solid var(--mid);border-radius:8px;padding:12px 14px;}
@@ -137,25 +125,19 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .obs-form h6{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
 .obs-form .orow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
 
-/* VALORES CHECK */
-.val-checks{display:flex;flex-direction:column;gap:7px;}
-.val-checks label{display:flex;align-items:center;gap:7px;font-size:12px;cursor:pointer;color:#555;}
-.val-checks input[type=checkbox]{accent-color:var(--red);width:14px;height:14px;}
-
-/* FICHA FOOTER */
 .ficha-footer{padding:0 26px 26px;display:flex;justify-content:flex-end;gap:10px;}
 .btn-save{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-save:hover{background:var(--red);}
 .btn-print{background:var(--gray);color:var(--dark);border:1px solid var(--mid);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-print:hover{border-color:var(--red);color:var(--red);}
 
-/* TOAST */
 .toast{position:fixed;bottom:28px;right:28px;background:#155724;color:white;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:999;}
 .toast.show{opacity:1;}
 
 footer{background:var(--dark);color:rgba(255,255,255,0.4);text-align:center;padding:20px;font-size:11px;margin-top:50px;}
 footer span{color:var(--red);}
 
+@media(max-width:1100px){.fgrid{grid-template-columns:1fr 1fr;}}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr;}}
 @media(max-width:700px){header{padding:12px 16px;}nav{display:none;}.hero{padding:44px 18px 36px;}.hero h1{font-size:24px;}.igrid,.ngrid{padding:16px;}.ncontent{padding:18px;}}
 </style>
@@ -214,14 +196,11 @@ footer span{color:var(--red);}
       <div class="ficha-header"><div><h4>📋 Ficha do Núcleo AI</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
       <div class="ficha-body">
         <div class="fgrid">
+
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" value="Núcleo AI"/></div>
               <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
-              <div class="frow">
-                <div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div>
-                <div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div>
-              </div>
               <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
               <div class="frow">
                 <div class="field"><label>Data de Início</label><input type="date"/></div>
@@ -239,6 +218,7 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
               <div style="overflow-x:auto"><table class="dtable" id="team-ai">
@@ -277,6 +257,7 @@ footer span{color:var(--red);}
               <button class="btn-add-row" onclick="addRec('rec-ai')">+ Adicionar recurso</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-ai">
@@ -289,16 +270,8 @@ footer span{color:var(--red);}
                 <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-ai',this)">Registrar</button>
               </div>
             </div>
-            <div class="fsec"><h5>6. Valores LR</h5>
-              <div class="val-checks">
-                <label><input type="checkbox"/> Respeito nas relações</label>
-                <label><input type="checkbox"/> Comprometimento real</label>
-                <label><input type="checkbox"/> Responsabilidade com o cliente</label>
-                <label><input type="checkbox"/> Ética profissional</label>
-                <label><input type="checkbox"/> Agir com verdade</label>
-              </div>
-            </div>
           </div>
+
         </div>
       </div>
       <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
@@ -319,40 +292,80 @@ footer span{color:var(--red);}
       <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Digital LR</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
       <div class="ficha-body">
         <div class="fgrid">
+
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" value="Digital LR"/></div>
               <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
-              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
               <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
-              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
+              <div class="frow">
+                <div class="field"><label>Data de Início</label><input type="date"/></div>
+                <div class="field"><label>Prazo / Meta</label><input type="date"/></div>
+              </div>
             </div>
             <div class="fsec"><h5>🌡️ Termômetro</h5>
-              <div class="term-wrap"><div class="term-num" id="tn-digital">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-digital" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('digital',this.value)"/></div></div>
+              <div class="term-wrap">
+                <div class="term-num" id="tn-digital">10<small>%</small></div>
+                <div class="term-area">
+                  <div class="term-bar"><div class="term-fill" id="tf-digital" style="width:10%"></div></div>
+                  <input type="range" min="0" max="100" value="10" oninput="updT('digital',this.value)"/>
+                </div>
+              </div>
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-digital"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="team-digital">
+                <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome"/></td>
+                  <td><input type="text" placeholder="Papel"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addTeam('team-digital')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Projetos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-digital"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-digital">
+                <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome do projeto"/></td>
+                  <td><input type="text" placeholder="Responsável"/></td>
+                  <td><input type="date"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addProj('proj-digital')">+ Adicionar projeto</button>
             </div>
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-digital"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-digital">
+                <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Ferramenta / recurso"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addRec('rec-digital')">+ Adicionar recurso</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-digital"></div>
-              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-digital',this)">Registrar</button></div>
+              <div class="obs-form">
+                <h6>+ Nova Observação</h6>
+                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
+                <div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div>
+                <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-digital',this)">Registrar</button>
+              </div>
             </div>
-            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
           </div>
+
         </div>
       </div>
       <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
@@ -373,40 +386,80 @@ footer span{color:var(--red);}
       <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Insight LR</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
       <div class="ficha-body">
         <div class="fgrid">
+
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" value="Insight LR"/></div>
               <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
-              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
               <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
-              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
+              <div class="frow">
+                <div class="field"><label>Data de Início</label><input type="date"/></div>
+                <div class="field"><label>Prazo / Meta</label><input type="date"/></div>
+              </div>
             </div>
             <div class="fsec"><h5>🌡️ Termômetro</h5>
-              <div class="term-wrap"><div class="term-num" id="tn-insight">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-insight" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('insight',this.value)"/></div></div>
+              <div class="term-wrap">
+                <div class="term-num" id="tn-insight">10<small>%</small></div>
+                <div class="term-area">
+                  <div class="term-bar"><div class="term-fill" id="tf-insight" style="width:10%"></div></div>
+                  <input type="range" min="0" max="100" value="10" oninput="updT('insight',this.value)"/>
+                </div>
+              </div>
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-insight"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="team-insight">
+                <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome"/></td>
+                  <td><input type="text" placeholder="Papel"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addTeam('team-insight')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Projetos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-insight"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-insight">
+                <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome do projeto"/></td>
+                  <td><input type="text" placeholder="Responsável"/></td>
+                  <td><input type="date"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addProj('proj-insight')">+ Adicionar projeto</button>
             </div>
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-insight"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-insight">
+                <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Ferramenta / recurso"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addRec('rec-insight')">+ Adicionar recurso</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-insight"></div>
-              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-insight',this)">Registrar</button></div>
+              <div class="obs-form">
+                <h6>+ Nova Observação</h6>
+                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
+                <div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div>
+                <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-insight',this)">Registrar</button>
+              </div>
             </div>
-            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
           </div>
+
         </div>
       </div>
       <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
@@ -427,40 +480,80 @@ footer span{color:var(--red);}
       <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Processo | Comunicação</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
       <div class="ficha-body">
         <div class="fgrid">
+
           <div class="fcol">
             <div class="fsec"><h5>1. Dados Gerais</h5>
               <div class="field"><label>Nome do Núcleo</label><input type="text" value="Processo | Comunicação"/></div>
               <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
-              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
               <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
-              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
+              <div class="frow">
+                <div class="field"><label>Data de Início</label><input type="date"/></div>
+                <div class="field"><label>Prazo / Meta</label><input type="date"/></div>
+              </div>
             </div>
             <div class="fsec"><h5>🌡️ Termômetro</h5>
-              <div class="term-wrap"><div class="term-num" id="tn-processo">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-processo" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('processo',this.value)"/></div></div>
+              <div class="term-wrap">
+                <div class="term-num" id="tn-processo">10<small>%</small></div>
+                <div class="term-area">
+                  <div class="term-bar"><div class="term-fill" id="tf-processo" style="width:10%"></div></div>
+                  <input type="range" min="0" max="100" value="10" oninput="updT('processo',this.value)"/>
+                </div>
+              </div>
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-processo"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="team-processo">
+                <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome"/></td>
+                  <td><input type="text" placeholder="Papel"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addTeam('team-processo')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Projetos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-processo"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-processo">
+                <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome do projeto"/></td>
+                  <td><input type="text" placeholder="Responsável"/></td>
+                  <td><input type="date"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addProj('proj-processo')">+ Adicionar projeto</button>
             </div>
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-processo"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-processo">
+                <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Ferramenta / recurso"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
               <button class="btn-add-row" onclick="addRec('rec-processo')">+ Adicionar recurso</button>
             </div>
           </div>
+
           <div class="fcol">
             <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-processo"></div>
-              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-processo',this)">Registrar</button></div>
+              <div class="obs-form">
+                <h6>+ Nova Observação</h6>
+                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
+                <div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div>
+                <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-processo',this)">Registrar</button>
+              </div>
             </div>
-            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
           </div>
+
         </div>
       </div>
       <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
@@ -539,7 +632,11 @@ function toast(){
 
 window.addEventListener('load',()=>{
   setTimeout(()=>{
-    document.querySelectorAll('.prog-fill').forEach(b=>{const w=b.style.width;b.style.width='0';setTimeout(()=>b.style.width=w,300);});
+    document.querySelectorAll('.prog-fill').forEach(b=>{
+      const w=b.style.width;
+      b.style.width='0';
+      setTimeout(()=>b.style.width=w,300);
+    });
   },500);
 });
 </script>
