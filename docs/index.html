@@ -1,310 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Plataforma de Cultura LR</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cultura LR Marketing</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --red: #D91E1E;
-    --dark: #1a1a1a;
-    --gray: #f5f5f5;
-    --mid: #e0e0e0;
-    --text: #333;
-    --shadow: 0 4px 20px rgba(0,0,0,0.1);
-    --radius: 12px;
-  }
-  body { font-family: 'Segoe UI', sans-serif; background: var(--gray); color: var(--text); }
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--red:#D91E1E;--dark:#1a1a1a;--gray:#f5f5f5;--mid:#e0e0e0;--shadow:0 4px 20px rgba(0,0,0,0.1);--radius:12px;}
+body{font-family:'Segoe UI',sans-serif;background:var(--gray);color:#333;}
 
-  /* HEADER */
-  header {
-    background: var(--dark); padding: 14px 40px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  }
-  .logo-area { display: flex; align-items: center; gap: 12px; }
-  .logo-area img { height: 42px; border-radius: 50%; }
-  .logo-text { color: white; font-size: 17px; font-weight: 700; }
-  .logo-text small { display: block; color: var(--red); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
-  nav { display: flex; gap: 6px; flex-wrap: wrap; }
-  nav button {
-    background: transparent; border: 1px solid rgba(255,255,255,0.2);
-    color: white; padding: 7px 14px; border-radius: 20px;
-    cursor: pointer; font-size: 12px; transition: all 0.2s; font-family: inherit;
-  }
-  nav button:hover, nav button.active { background: var(--red); border-color: var(--red); }
+header{background:var(--dark);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.4);}
+.logo-area{display:flex;align-items:center;gap:12px;}
+.logo-area img{height:42px;border-radius:50%;}
+.logo-text{color:white;font-size:16px;font-weight:700;line-height:1.2;}
+.logo-text small{display:block;color:var(--red);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:400;}
+nav{display:flex;gap:6px;flex-wrap:wrap;}
+nav button{background:transparent;border:1px solid rgba(255,255,255,0.2);color:white;padding:7px 14px;border-radius:20px;cursor:pointer;font-size:12px;font-family:inherit;transition:all 0.2s;}
+nav button:hover,nav button.active{background:var(--red);border-color:var(--red);}
 
-  /* PAGES */
-  .page { display: none; }
-  .page.active { display: block; }
+.page{display:none;}
+.page.active{display:block;}
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d0a0a 50%, #1a1a1a 100%);
-    color: white; padding: 70px 40px 50px; text-align: center; position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute; top: -50%; left: -20%;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(217,30,30,0.15) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-  .hero-logo {
-    width: 88px; height: 88px; background: white; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin: 0 auto 20px; position: relative; z-index: 1;
-    box-shadow: 0 0 40px rgba(217,30,30,0.4); overflow: hidden;
-  }
-  .hero-logo img { width: 76px; object-fit: contain; }
-  .hero h1 { font-size: 38px; font-weight: 800; margin-bottom: 8px; position: relative; z-index: 1; }
-  .hero h1 span { color: var(--red); }
-  .hero p { font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 28px; position: relative; z-index: 1; }
-  .badge {
-    display: inline-block; background: var(--red); color: white;
-    font-size: 12px; font-weight: 700; padding: 6px 22px;
-    border-radius: 20px; letter-spacing: 3px; text-transform: uppercase;
-    position: relative; z-index: 1;
-  }
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d0a0a 50%,#1a1a1a 100%);color:white;padding:70px 40px 50px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(217,30,30,0.15) 0%,transparent 70%);border-radius:50%;}
+.hero-logo{width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 40px rgba(217,30,30,0.4);overflow:hidden;}
+.hero-logo img{width:78px;object-fit:contain;}
+.hero h1{font-size:38px;font-weight:800;margin-bottom:8px;position:relative;z-index:1;}
+.hero h1 span{color:var(--red);}
+.hero p{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;position:relative;z-index:1;}
+.badge{display:inline-block;background:var(--red);color:white;font-size:12px;font-weight:700;padding:6px 22px;border-radius:20px;letter-spacing:3px;text-transform:uppercase;position:relative;z-index:1;}
 
-  /* IDENTITY CARDS */
-  .identity-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 22px; padding: 40px; max-width: 1200px; margin: 0 auto;
-  }
-  .icard {
-    background: white; border-radius: var(--radius); padding: 26px;
-    box-shadow: var(--shadow); border-top: 4px solid var(--red); transition: transform 0.2s;
-  }
-  .icard:hover { transform: translateY(-4px); }
-  .icard .ico { font-size: 30px; margin-bottom: 12px; }
-  .icard h3 { color: var(--red); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; font-weight: 700; }
-  .icard p { font-size: 13px; line-height: 1.7; color: #555; }
-  .icard ul { list-style: none; padding: 0; }
-  .icard ul li { font-size: 13px; color: #555; padding: 5px 0; border-bottom: 1px solid var(--mid); display: flex; align-items: center; gap: 8px; }
-  .icard ul li::before { content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
-  .icard-dark { background: #1a1a1a !important; border-top-color: #1a1a1a !important; }
-  .icard-dark h3 { color: var(--red) !important; }
-  .prop-text { color: white; font-size: 26px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
-  .icard-dark p { color: rgba(255,255,255,0.4); font-size: 12px; }
+/* IDENTITY */
+.igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
+.icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
+.icard:hover{transform:translateY(-4px);}
+.icard .ico{font-size:28px;margin-bottom:10px;}
+.icard h3{color:var(--red);font-size:10px;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
+.icard p{font-size:13px;line-height:1.7;color:#555;}
+.icard ul{list-style:none;padding:0;}
+.icard ul li{font-size:13px;color:#555;padding:5px 0;border-bottom:1px solid var(--mid);display:flex;align-items:center;gap:8px;}
+.icard ul li::before{content:'';width:6px;height:6px;background:var(--red);border-radius:50%;flex-shrink:0;}
+.icard-dark{background:#1a1a1a!important;border-top-color:#1a1a1a!important;}
+.icard-dark h3{color:var(--red)!important;}
+.prop-text{color:white;font-size:26px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.icard-dark p{color:rgba(255,255,255,0.4);font-size:12px;}
 
-  /* SECTION TITLE */
-  .sec-title { text-align: center; padding: 46px 40px 18px; }
-  .sec-title h2 { font-size: 26px; font-weight: 800; color: var(--dark); }
-  .sec-title h2 span { color: var(--red); }
-  .sec-title p { color: #888; font-size: 14px; margin-top: 6px; }
+/* SEC TITLE */
+.sec-title{text-align:center;padding:44px 36px 16px;}
+.sec-title h2{font-size:26px;font-weight:800;color:var(--dark);}
+.sec-title h2 span{color:var(--red);}
+.sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
-  /* NUCLEO CARDS */
-  .nucleos-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px; padding: 18px 40px 60px; max-width: 1200px; margin: 0 auto;
-  }
-  .ncard {
-    background: white; border-radius: var(--radius); padding: 26px;
-    box-shadow: var(--shadow); cursor: pointer; transition: all 0.2s;
-    border-left: 5px solid var(--red);
-  }
-  .ncard:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(217,30,30,0.15); }
-  .ncard .nico { font-size: 34px; margin-bottom: 12px; }
-  .ncard h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 7px; }
-  .ncard p { font-size: 12px; color: #888; line-height: 1.6; margin-bottom: 14px; }
-  .nstats { display: flex; gap: 10px; margin-bottom: 14px; }
-  .sbadge { background: var(--gray); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: #666; }
-  .sbadge strong { color: var(--red); display: block; font-size: 15px; }
-  .prog { height: 5px; background: var(--mid); border-radius: 10px; overflow: hidden; }
-  .prog-fill { height: 100%; background: linear-gradient(90deg, var(--red), #ff6b6b); border-radius: 10px; transition: width 1.2s ease; }
-  .prog-label { font-size: 10px; color: #aaa; margin-top: 3px; text-align: right; }
+/* NUCLEO CARDS HOME */
+.ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:16px 36px 56px;max-width:1200px;margin:0 auto;}
+.ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
+.ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
+.ncard .nico{font-size:32px;margin-bottom:10px;}
+.ncard h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.ncard p{font-size:12px;color:#888;line-height:1.6;margin-bottom:14px;}
+.nstats{display:flex;gap:10px;margin-bottom:12px;}
+.sbadge{background:var(--gray);border-radius:8px;padding:5px 10px;font-size:11px;color:#666;}
+.sbadge strong{color:var(--red);display:block;font-size:14px;}
+.prog{height:5px;background:var(--mid);border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--red),#ff6b6b);border-radius:10px;transition:width 1.2s ease;}
+.prog-label{font-size:10px;color:#aaa;margin-top:3px;text-align:right;}
 
-  /* NUCLEO PAGE HEADER */
-  .nheader { background: linear-gradient(135deg, #1a1a1a, #2d0a0a); color: white; padding: 36px 40px; }
-  .breadcrumb { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
-  .breadcrumb span { cursor: pointer; transition: color 0.2s; }
-  .breadcrumb span:hover { color: var(--red); }
-  .nheader h2 { font-size: 30px; font-weight: 800; margin-bottom: 6px; }
-  .nheader h2 span { color: var(--red); }
-  .nheader > p { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 600px; }
-  .nmeta { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
-  .mchip {
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
-    color: white; padding: 5px 14px; border-radius: 20px; font-size: 11px;
-  }
+/* NUCLEO PAGE */
+.nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
+.breadcrumb span{cursor:pointer;transition:color 0.2s;}
+.breadcrumb span:hover{color:var(--red);}
+.nheader h2{font-size:28px;font-weight:800;margin-bottom:6px;}
+.nheader h2 span{color:var(--red);}
+.nheader>p{color:rgba(255,255,255,0.6);font-size:14px;max-width:600px;}
+.nmeta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.mchip{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:white;padding:5px 14px;border-radius:20px;font-size:11px;}
 
-  /* NUCLEO CONTENT */
-  .ncontent { padding: 36px 40px; max-width: 1100px; margin: 0 auto; }
-  .content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
-  .content-header h3 { font-size: 18px; font-weight: 700; }
-  .btn-red {
-    background: var(--red); color: white; border: none;
-    padding: 9px 20px; border-radius: 8px; cursor: pointer;
-    font-size: 12px; font-weight: 600; font-family: inherit; transition: all 0.2s;
-  }
-  .btn-red:hover { background: #b51818; }
+.ncontent{padding:32px 36px;max-width:1100px;margin:0 auto;}
 
-  /* FICHA */
-  .ficha {
-    background: white; border-radius: var(--radius);
-    box-shadow: var(--shadow); overflow: hidden;
-    border: 1px solid var(--mid); margin-bottom: 24px;
-  }
-  .ficha-header {
-    background: var(--dark); color: white;
-    padding: 16px 22px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .ficha-header h4 { font-size: 15px; font-weight: 700; }
-  .ficha-header p { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-  .ficha-toggle {
-    background: rgba(255,255,255,0.1); border: none; color: white;
-    padding: 6px 14px; border-radius: 6px; cursor: pointer;
-    font-size: 12px; font-family: inherit; transition: all 0.2s;
-  }
-  .ficha-toggle:hover { background: var(--red); }
+/* FICHA */
+.ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
+.ficha-header{background:var(--dark);color:white;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;}
+.ficha-header h4{font-size:14px;font-weight:700;}
+.ficha-header p{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;}
 
-  .ficha-body { display: none; padding: 28px; }
-  .ficha-body.open { display: block; }
+.ficha-body{padding:26px;}
 
-  /* FICHA GRID */
-  .ficha-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
-  .ficha-col { display: flex; flex-direction: column; gap: 16px; }
-  .ficha-section h5 {
-    font-size: 10px; color: var(--red); letter-spacing: 2px;
-    text-transform: uppercase; font-weight: 700;
-    margin-bottom: 12px; padding-bottom: 6px;
-    border-bottom: 2px solid var(--red);
-  }
+/* FICHA GRID 3 COLUNAS */
+.fgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;}
+.fcol{display:flex;flex-direction:column;gap:16px;}
+.fsec h5{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--red);}
 
-  /* FORM ELEMENTS */
-  .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
-  .field label { font-size: 10px; color: #999; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-  .field input, .field textarea, .field select {
-    border: 1px solid var(--mid); border-radius: 6px;
-    padding: 8px 10px; font-size: 13px; color: var(--text);
-    background: white; font-family: inherit; outline: none;
-    transition: border-color 0.2s; resize: none;
-  }
-  .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--red); }
-  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+/* CAMPOS */
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:8px;}
+.field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.field input,.field textarea,.field select{border:1px solid var(--mid);border-radius:6px;padding:7px 10px;font-size:13px;color:#333;background:white;font-family:inherit;outline:none;transition:border-color 0.2s;resize:none;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 
-  /* TABELA DINAMICA */
-  .table-wrapper { overflow-x: auto; }
-  .dynamic-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  .dynamic-table th {
-    background: var(--dark); color: white;
-    padding: 8px 10px; text-align: left; font-size: 10px;
-    letter-spacing: 1px; text-transform: uppercase;
-  }
-  .dynamic-table td { padding: 6px 4px; border-bottom: 1px solid var(--mid); }
-  .dynamic-table input, .dynamic-table select {
-    width: 100%; border: 1px solid var(--mid); border-radius: 4px;
-    padding: 5px 8px; font-size: 12px; font-family: inherit;
-    outline: none; transition: border-color 0.2s;
-  }
-  .dynamic-table input:focus, .dynamic-table select:focus { border-color: var(--red); }
-  .btn-remove {
-    background: #fee; border: 1px solid #fdd; color: var(--red);
-    border-radius: 4px; padding: 4px 8px; cursor: pointer;
-    font-size: 11px; font-family: inherit;
-  }
-  .btn-add-row {
-    background: var(--gray); border: 1px dashed #ccc; color: #666;
-    padding: 7px 14px; border-radius: 6px; cursor: pointer;
-    font-size: 12px; font-family: inherit; margin-top: 8px;
-    transition: all 0.2s; width: 100%;
-  }
-  .btn-add-row:hover { border-color: var(--red); color: var(--red); }
+/* TABELAS */
+.dtable{width:100%;border-collapse:collapse;font-size:12px;}
+.dtable th{background:var(--dark);color:white;padding:8px 10px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
+.dtable td{padding:5px 4px;border-bottom:1px solid var(--mid);}
+.dtable input,.dtable select{width:100%;border:1px solid var(--mid);border-radius:4px;padding:5px 7px;font-size:12px;font-family:inherit;outline:none;transition:border-color 0.2s;}
+.dtable input:focus,.dtable select:focus{border-color:var(--red);}
+.btn-rm{background:#fee;border:1px solid #fdd;color:var(--red);border-radius:4px;padding:3px 7px;cursor:pointer;font-size:11px;font-family:inherit;}
+.btn-add-row{background:var(--gray);border:1px dashed #ccc;color:#666;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-family:inherit;margin-top:6px;transition:all 0.2s;width:100%;text-align:center;}
+.btn-add-row:hover{border-color:var(--red);color:var(--red);}
 
-  /* STATUS SELECT */
-  .sel-status { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; border: none; cursor: pointer; }
-  .s-analise { background: #fff3cd; color: #856404; }
-  .s-aprovado { background: #d4edda; color: #155724; }
-  .s-pendente { background: #f8d7da; color: #721c24; }
+/* STATUS CORES */
+.s-ok{background:#d4edda;color:#155724;}
+.s-att{background:#fff3cd;color:#856404;}
+.s-no{background:#f8d7da;color:#721c24;}
 
-  /* TERMOMETRO */
-  .term-wrap { background: var(--gray); border-radius: 10px; padding: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 18px; }
-  .term-num { font-size: 48px; font-weight: 900; color: var(--dark); min-width: 90px; text-align: center; }
-  .term-num small { font-size: 16px; color: #aaa; }
-  .term-area { flex: 1; }
-  .term-bar { height: 14px; background: var(--mid); border-radius: 10px; overflow: hidden; margin-bottom: 8px; }
-  .term-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--red), #ff6b6b); transition: width 0.8s; }
+/* TERMOMETRO */
+.term-wrap{background:var(--gray);border-radius:10px;padding:16px;display:flex;align-items:center;gap:16px;margin-bottom:10px;}
+.term-num{font-size:44px;font-weight:900;color:var(--dark);min-width:80px;text-align:center;}
+.term-num small{font-size:16px;color:#aaa;}
+.term-area{flex:1;}
+.term-bar{height:14px;background:var(--mid);border-radius:10px;overflow:hidden;margin-bottom:8px;}
+.term-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--red),#ff6b6b);transition:width 0.5s;}
+.term-area input[type=range]{width:100%;accent-color:var(--red);}
 
-  /* OBSERVACOES */
-  .obs-list { position: relative; padding-left: 20px; }
-  .obs-list::before { content: ''; position: absolute; left: 4px; top: 0; bottom: 0; width: 2px; background: var(--mid); }
-  .obs-item {
-    position: relative; margin-bottom: 16px;
-    background: white; border: 1px solid var(--mid);
-    border-radius: 8px; padding: 14px 16px;
-  }
-  .obs-item::before {
-    content: ''; position: absolute; left: -24px; top: 16px;
-    width: 10px; height: 10px; background: var(--red);
-    border-radius: 50%; border: 2px solid white;
-  }
-  .obs-meta { font-size: 10px; color: #aaa; margin-bottom: 6px; }
-  .obs-meta strong { color: var(--dark); font-size: 11px; }
-  .obs-prob { font-size: 12px; color: #555; margin-bottom: 6px; }
-  .obs-sol { background: #f0fff4; border-left: 3px solid #28a745; padding: 6px 10px; border-radius: 0 5px 5px 0; font-size: 11px; color: #155724; }
+/* OBS */
+.obs-list{position:relative;padding-left:18px;margin-bottom:12px;}
+.obs-list::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:2px;background:var(--mid);}
+.obs-item{position:relative;margin-bottom:12px;background:white;border:1px solid var(--mid);border-radius:8px;padding:12px 14px;}
+.obs-item::before{content:'';position:absolute;left:-22px;top:14px;width:10px;height:10px;background:var(--red);border-radius:50%;border:2px solid white;}
+.obs-meta{font-size:10px;color:#aaa;margin-bottom:5px;}
+.obs-meta strong{color:var(--dark);font-size:11px;}
+.obs-prob{font-size:12px;color:#555;margin-bottom:5px;}
+.obs-sol{background:#f0fff4;border-left:3px solid #28a745;padding:5px 10px;border-radius:0 5px 5px 0;font-size:11px;color:#155724;}
 
-  .obs-form { background: var(--gray); border-radius: 8px; padding: 16px; margin-top: 14px; }
-  .obs-form h6 { font-size: 10px; color: var(--red); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; font-weight: 700; }
-  .obs-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+.obs-form{background:var(--gray);border-radius:8px;padding:14px;margin-top:10px;}
+.obs-form h6{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
+.obs-form .orow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
 
-  /* SALVAR */
-  .ficha-footer { padding: 0 28px 28px; display: flex; justify-content: flex-end; gap: 10px; }
-  .btn-save {
-    background: var(--dark); color: white; border: none;
-    padding: 10px 24px; border-radius: 8px; cursor: pointer;
-    font-size: 13px; font-weight: 600; font-family: inherit; transition: all 0.2s;
-  }
-  .btn-save:hover { background: var(--red); }
-  .btn-print {
-    background: var(--gray); color: var(--dark); border: 1px solid var(--mid);
-    padding: 10px 18px; border-radius: 8px; cursor: pointer;
-    font-size: 13px; font-weight: 600; font-family: inherit; transition: all 0.2s;
-  }
-  .btn-print:hover { border-color: var(--red); color: var(--red); }
+/* VALORES CHECK */
+.val-checks{display:flex;flex-direction:column;gap:7px;}
+.val-checks label{display:flex;align-items:center;gap:7px;font-size:12px;cursor:pointer;color:#555;}
+.val-checks input[type=checkbox]{accent-color:var(--red);width:14px;height:14px;}
 
-  /* SAVED TOAST */
-  .toast {
-    position: fixed; bottom: 30px; right: 30px;
-    background: #155724; color: white;
-    padding: 12px 24px; border-radius: 8px;
-    font-size: 13px; font-weight: 600;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.3s; z-index: 999;
-  }
-  .toast.show { opacity: 1; }
+/* FICHA FOOTER */
+.ficha-footer{padding:0 26px 26px;display:flex;justify-content:flex-end;gap:10px;}
+.btn-save{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
+.btn-save:hover{background:var(--red);}
+.btn-print{background:var(--gray);color:var(--dark);border:1px solid var(--mid);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
+.btn-print:hover{border-color:var(--red);color:var(--red);}
 
-  /* FOOTER */
-  footer { background: var(--dark); color: rgba(255,255,255,0.4); text-align: center; padding: 20px; font-size: 11px; margin-top: 60px; }
-  footer span { color: var(--red); }
+/* TOAST */
+.toast{position:fixed;bottom:28px;right:28px;background:#155724;color:white;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:999;}
+.toast.show{opacity:1;}
 
-  @media (max-width: 900px) {
-    .ficha-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 768px) {
-    header { padding: 12px 18px; }
-    .hero { padding: 50px 20px 40px; }
-    .hero h1 { font-size: 24px; }
-    .identity-grid, .nucleos-grid { padding: 18px; }
-    .ncontent { padding: 20px; }
-    nav { display: none; }
-  }
+footer{background:var(--dark);color:rgba(255,255,255,0.4);text-align:center;padding:20px;font-size:11px;margin-top:50px;}
+footer span{color:var(--red);}
+
+@media(max-width:900px){.fgrid{grid-template-columns:1fr;}}
+@media(max-width:700px){header{padding:12px 16px;}nav{display:none;}.hero{padding:44px 18px 36px;}.hero h1{font-size:24px;}.igrid,.ngrid{padding:16px;}.ncontent{padding:18px;}}
 </style>
 </head>
 <body>
 
-<div class="toast" id="toast">✅ Ficha salva com sucesso!</div>
+<div class="toast" id="toast">✅ Ficha salva!</div>
 
-<!-- HEADER -->
 <header>
   <div class="logo-area">
-    <img src="logo-lr.png" alt="LR" />
-    <div class="logo-text">
-      LR Marketing
-      <small>Plataforma de Cultura</small>
-    </div>
+    <img src="logo-lr.png" alt="LR"/>
+    <div class="logo-text">LR Marketing<small>Plataforma de Cultura</small></div>
   </div>
   <nav>
     <button class="active" onclick="goPage('home',this)">Home</button>
@@ -315,576 +178,370 @@
   </nav>
 </header>
 
-<!-- ===== HOME ===== -->
+<!-- HOME -->
 <div id="page-home" class="page active">
-
   <div class="hero">
-    <div class="hero-logo"><img src="logo-lr.png" alt="LR" /></div>
+    <div class="hero-logo"><img src="logo-lr.png" alt="LR"/></div>
     <h1>Cultura <span>LR Marketing</span></h1>
     <p>Nossa cultura não é só falada — ela é vivida, organizada e construída por cada um de nós.</p>
     <div class="badge">✦ Propósito: Ser Foda ✦</div>
   </div>
-
-  <div class="identity-grid">
-    <div class="icard">
-      <div class="ico">🎯</div>
-      <h3>Missão</h3>
-      <p>Ser agência omnichannel para médias e grandes empresas corporativas, facilitando processos de marketing estratégico como um braço terceirizado de alto desempenho.</p>
-    </div>
-    <div class="icard">
-      <div class="ico">🔭</div>
-      <h3>Visão</h3>
-      <p>Ser a <strong>melhor empresa de marketing estratégico do interior de São Paulo</strong> — referência em resultado, relacionamento e inovação.</p>
-    </div>
-    <div class="icard">
-      <div class="ico">💎</div>
-      <h3>Valores</h3>
-      <ul>
-        <li>Respeito nas relações</li>
-        <li>Comprometimento real com os resultados</li>
-        <li>Responsabilidade com o negócio do cliente</li>
-        <li>Ética profissional</li>
-        <li>Agir com verdade</li>
-      </ul>
-    </div>
-    <div class="icard icard-dark">
-      <div class="ico">🔥</div>
-      <h3>Propósito</h3>
-      <div class="prop-text">Ser Foda.</div>
-      <p>Entregar o melhor, sempre. Superar expectativas. Deixar marca.</p>
-    </div>
+  <div class="igrid">
+    <div class="icard"><div class="ico">🎯</div><h3>Missão</h3><p>Ser agência omnichannel para médias e grandes empresas corporativas, facilitando processos de marketing estratégico como um braço terceirizado de alto desempenho.</p></div>
+    <div class="icard"><div class="ico">🔭</div><h3>Visão</h3><p>Ser a melhor empresa de marketing estratégico do interior de São Paulo — referência em resultado, relacionamento e inovação.</p></div>
+    <div class="icard"><div class="ico">💎</div><h3>Valores</h3><ul><li>Respeito nas relações</li><li>Comprometimento real com os resultados</li><li>Responsabilidade com o negócio do cliente</li><li>Ética profissional</li><li>Agir com verdade</li></ul></div>
+    <div class="icard icard-dark"><div class="ico">🔥</div><h3>Propósito</h3><div class="prop-text">Ser Foda.</div><p>Entregar o melhor, sempre. Superar expectativas. Deixar marca.</p></div>
   </div>
-
-  <div class="sec-title">
-    <h2>Nossos <span>Núcleos Ativos</span></h2>
-    <p>Clique em um núcleo para acessar e editar sua ficha completa.</p>
-  </div>
-
-  <div class="nucleos-grid">
-    <div class="ncard" onclick="goPage('ai')">
-      <div class="nico">🤖</div>
-      <h3>Núcleo AI</h3>
-      <p>Aplicação de inteligência artificial no dia a dia da LR.</p>
-      <div class="nstats">
-        <div class="sbadge"><strong>1</strong>Projeto</div>
-        <div class="sbadge"><strong>–</strong>Equipe</div>
-      </div>
-      <div class="prog"><div class="prog-fill" style="width:25%"></div></div>
-      <div class="prog-label">Em estruturação</div>
-    </div>
-    <div class="ncard" onclick="goPage('digital')">
-      <div class="nico">📱</div>
-      <h3>Digital LR</h3>
-      <p>Fortalecer toda a frente digital da LR Marketing.</p>
-      <div class="nstats">
-        <div class="sbadge"><strong>0</strong>Projetos</div>
-        <div class="sbadge"><strong>–</strong>Equipe</div>
-      </div>
-      <div class="prog"><div class="prog-fill" style="width:10%"></div></div>
-      <div class="prog-label">Em estruturação</div>
-    </div>
-    <div class="ncard" onclick="goPage('insight')">
-      <div class="nico">💡</div>
-      <h3>Insight LR</h3>
-      <p>Inteligência estratégica e geração de insights.</p>
-      <div class="nstats">
-        <div class="sbadge"><strong>0</strong>Projetos</div>
-        <div class="sbadge"><strong>–</strong>Equipe</div>
-      </div>
-      <div class="prog"><div class="prog-fill" style="width:10%"></div></div>
-      <div class="prog-label">Em estruturação</div>
-    </div>
-    <div class="ncard" onclick="goPage('processo')">
-      <div class="nico">⚙️</div>
-      <h3>Processo | Comunicação</h3>
-      <p>Padronizar processos e melhorar comunicação interna.</p>
-      <div class="nstats">
-        <div class="sbadge"><strong>0</strong>Projetos</div>
-        <div class="sbadge"><strong>–</strong>Equipe</div>
-      </div>
-      <div class="prog"><div class="prog-fill" style="width:10%"></div></div>
-      <div class="prog-label">Em estruturação</div>
-    </div>
+  <div class="sec-title"><h2>Nossos <span>Núcleos</span></h2><p>Clique em um núcleo para acessar e preencher sua ficha completa.</p></div>
+  <div class="ngrid">
+    <div class="ncard" onclick="goPage('ai')"><div class="nico">🤖</div><h3>Núcleo AI</h3><p>Aplicação de IA no dia a dia da LR para elevar produtividade e qualidade.</p><div class="nstats"><div class="sbadge"><strong>1</strong>Projeto</div><div class="sbadge"><strong>–</strong>Equipe</div></div><div class="prog"><div class="prog-fill" style="width:25%"></div></div><div class="prog-label">Em estruturação</div></div>
+    <div class="ncard" onclick="goPage('digital')"><div class="nico">📱</div><h3>Digital LR</h3><p>Fortalecer toda a frente digital da LR Marketing.</p><div class="nstats"><div class="sbadge"><strong>0</strong>Projetos</div><div class="sbadge"><strong>–</strong>Equipe</div></div><div class="prog"><div class="prog-fill" style="width:10%"></div></div><div class="prog-label">Em estruturação</div></div>
+    <div class="ncard" onclick="goPage('insight')"><div class="nico">💡</div><h3>Insight LR</h3><p>Inteligência estratégica e geração de insights para clientes e LR.</p><div class="nstats"><div class="sbadge"><strong>0</strong>Projetos</div><div class="sbadge"><strong>–</strong>Equipe</div></div><div class="prog"><div class="prog-fill" style="width:10%"></div></div><div class="prog-label">Em estruturação</div></div>
+    <div class="ncard" onclick="goPage('processo')"><div class="nico">⚙️</div><h3>Processo | Comunicação</h3><p>Padronizar processos e melhorar comunicação interna.</p><div class="nstats"><div class="sbadge"><strong>0</strong>Projetos</div><div class="sbadge"><strong>–</strong>Equipe</div></div><div class="prog"><div class="prog-fill" style="width:10%"></div></div><div class="prog-label">Em estruturação</div></div>
   </div>
 </div>
 
-<!-- ===== NUCLEO AI ===== -->
+<!-- NUCLEO AI -->
 <div id="page-ai" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Núcleo AI</div>
     <h2>🤖 Núcleo <span>AI</span></h2>
     <p>Aplicar inteligência artificial no dia a dia da LR, aumentando produtividade e melhorando as entregas.</p>
-    <div class="nmeta">
-      <div class="mchip">👤 Líder: A definir</div>
-      <div class="mchip">📅 Início: Abr/2025</div>
-      <div class="mchip" style="background:rgba(40,167,69,0.3);border-color:#28a745;">🟢 Em andamento</div>
-    </div>
+    <div class="nmeta"><div class="mchip">👤 Líder: A definir</div><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(40,167,69,0.3);border-color:#28a745;">🟢 Em andamento</div></div>
   </div>
   <div class="ncontent">
-    <div class="content-header">
-      <h3>Ficha do Núcleo</h3>
-      <button class="btn-red" onclick="toggleFicha('ficha-ai')">📋 Abrir / Fechar Ficha</button>
-    </div>
-    <div class="ficha" id="ficha-ai">
-      <div class="ficha-header">
-        <div>
-          <h4>Ficha de Cadastro Detalhada — Núcleo AI</h4>
-          <p>Preencha todos os campos e salve para registrar o progresso do núcleo.</p>
-        </div>
-        <button class="ficha-toggle" onclick="toggleFicha('ficha-ai')">▾ Recolher</button>
-      </div>
-      <div class="ficha-body open" id="ficha-ai-body">
-        <div class="ficha-grid">
-
-          <!-- COLUNA 1 -->
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>1. Dados Gerais do Núcleo</h5>
-              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Núcleo AI" /></div>
-              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder" /></div>
-              <div class="field-row">
-                <div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000" /></div>
-                <div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br" /></div>
+    <div class="ficha">
+      <div class="ficha-header"><div><h4>📋 Ficha do Núcleo AI</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
+      <div class="ficha-body">
+        <div class="fgrid">
+          <div class="fcol">
+            <div class="fsec"><h5>1. Dados Gerais</h5>
+              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Núcleo AI"/></div>
+              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
+              <div class="frow">
+                <div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div>
+                <div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div>
               </div>
-              <div class="field"><label>Objetivo do Núcleo</label><textarea rows="3" placeholder="Descreva o objetivo principal..."></textarea></div>
-              <div class="field-row">
-                <div class="field"><label>Data de Início</label><input type="date" /></div>
-                <div class="field"><label>Prazo / Meta</label><input type="date" /></div>
+              <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
+              <div class="frow">
+                <div class="field"><label>Data de Início</label><input type="date"/></div>
+                <div class="field"><label>Prazo / Meta</label><input type="date"/></div>
               </div>
             </div>
-
-            <div class="ficha-section">
-              <h5>🌡️ Termômetro de Progresso</h5>
+            <div class="fsec"><h5>🌡️ Termômetro</h5>
               <div class="term-wrap">
-                <div class="term-num" id="term-ai-num">25<small>%</small></div>
+                <div class="term-num" id="tn-ai">25<small>%</small></div>
                 <div class="term-area">
-                  <div class="term-bar"><div class="term-fill" id="term-ai-fill" style="width:25%"></div></div>
-                  <input type="range" min="0" max="100" value="25" style="width:100%;accent-color:var(--red);" oninput="updateTerm('ai',this.value)" />
+                  <div class="term-bar"><div class="term-fill" id="tf-ai" style="width:25%"></div></div>
+                  <input type="range" min="0" max="100" value="25" oninput="updT('ai',this.value)"/>
                 </div>
               </div>
-              <div class="field"><label>Comentário do responsável</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
+              <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
-
-          <!-- COLUNA 2 -->
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>2. Equipe do Núcleo</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="team-ai">
-                  <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
-                  <tbody>
-                    <tr>
-                      <td><input type="text" placeholder="Nome" /></td>
-                      <td><input type="text" placeholder="Papel" /></td>
-                      <td>
-                        <select class="sel-status s-analise" onchange="colorSelect(this)">
-                          <option value="analise">Em análise</option>
-                          <option value="aprovado">Aprovado</option>
-                          <option value="pendente">Pendente</option>
-                        </select>
-                      </td>
-                      <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addRow('team-ai','<td><input type=text placeholder=Nome /></td><td><input type=text placeholder=Papel /></td><td><select class=sel-status s-analise onchange=colorSelect(this)><option value=analise>Em análise</option><option value=aprovado>Aprovado</option><option value=pendente>Pendente</option></select></td><td><button class=btn-remove onclick=removeRow(this)>✕</button></td>')">+ Adicionar membro</button>
+          <div class="fcol">
+            <div class="fsec"><h5>2. Equipe</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="team-ai">
+                <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome"/></td>
+                  <td><input type="text" placeholder="Papel"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
+              <button class="btn-add-row" onclick="addTeam('team-ai')">+ Adicionar membro</button>
             </div>
-
-            <div class="ficha-section">
-              <h5>3. Projetos / Atividades</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="proj-ai">
-                  <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
-                  <tbody>
-                    <tr>
-                      <td><input type="text" placeholder="Nome do projeto" /></td>
-                      <td><input type="text" placeholder="Responsável" /></td>
-                      <td><input type="date" /></td>
-                      <td>
-                        <select class="sel-status s-analise" onchange="colorSelect(this)">
-                          <option value="analise">Em andamento</option>
-                          <option value="aprovado">Concluído</option>
-                          <option value="pendente">Atrasado</option>
-                        </select>
-                      </td>
-                      <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addProjRow('proj-ai')">+ Adicionar projeto</button>
+            <div class="fsec"><h5>3. Projetos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-ai">
+                <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Nome do projeto"/></td>
+                  <td><input type="text" placeholder="Responsável"/></td>
+                  <td><input type="date"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
+              <button class="btn-add-row" onclick="addProj('proj-ai')">+ Adicionar projeto</button>
+            </div>
+            <div class="fsec"><h5>4. Recursos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-ai">
+                <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
+                <tbody><tr>
+                  <td><input type="text" placeholder="Ferramenta / recurso"/></td>
+                  <td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td>
+                  <td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>
+                </tr></tbody>
+              </table></div>
+              <button class="btn-add-row" onclick="addRec('rec-ai')">+ Adicionar recurso</button>
             </div>
           </div>
-
-          <!-- COLUNA 3 -->
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>4. Recursos Necessários</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="rec-ai">
-                  <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
-                  <tbody>
-                    <tr>
-                      <td><input type="text" placeholder="Ferramenta / recurso" /></td>
-                      <td>
-                        <select class="sel-status s-analise" onchange="colorSelect(this)">
-                          <option value="analise">Em análise</option>
-                          <option value="aprovado">Disponível</option>
-                          <option value="pendente">Pendente</option>
-                        </select>
-                      </td>
-                      <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addRecRow('rec-ai')">+ Adicionar recurso</button>
-            </div>
-
-            <div class="ficha-section">
-              <h5>5. Observações e Próximos Passos</h5>
+          <div class="fcol">
+            <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-ai">
-                <div class="obs-item">
-                  <div class="obs-meta"><strong>A definir</strong> · 10/04/2025</div>
-                  <div class="obs-prob">⚠️ Núcleo em fase inicial de estruturação.</div>
-                  <div class="obs-sol">✅ Próximo passo: definir líder e membros do time.</div>
-                </div>
+                <div class="obs-item"><div class="obs-meta"><strong>A definir</strong> · 10/04/2025</div><div class="obs-prob">⚠️ Núcleo em fase inicial de estruturação.</div><div class="obs-sol">✅ Próximo passo: definir líder e equipe.</div></div>
               </div>
               <div class="obs-form">
                 <h6>+ Nova Observação</h6>
-                <div class="form-row">
-                  <div class="field"><label>Situação / Problema</label><textarea rows="2" placeholder="Descreva..."></textarea></div>
-                  <div class="field"><label>Ação / Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div>
-                </div>
-                <div class="form-row" style="grid-template-columns:1fr 1fr;gap:10px;">
-                  <div class="field"><label>Responsável</label><input type="text" placeholder="Nome" /></div>
-                  <div class="field"><label>Data</label><input type="date" /></div>
-                </div>
-                <button class="btn-save" style="margin-top:4px;" onclick="addObs('obs-ai',this)">Registrar</button>
+                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
+                <div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div>
+                <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-ai',this)">Registrar</button>
               </div>
             </div>
-
-            <div class="ficha-section">
-              <h5>6. Valores LR Presentes</h5>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;">
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Respeito nas relações</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Comprometimento real</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Responsabilidade com o cliente</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Ética profissional</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Agir com verdade</label>
+            <div class="fsec"><h5>6. Valores LR</h5>
+              <div class="val-checks">
+                <label><input type="checkbox"/> Respeito nas relações</label>
+                <label><input type="checkbox"/> Comprometimento real</label>
+                <label><input type="checkbox"/> Responsabilidade com o cliente</label>
+                <label><input type="checkbox"/> Ética profissional</label>
+                <label><input type="checkbox"/> Agir com verdade</label>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="showToast()">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
 
-<!-- ===== DIGITAL LR ===== -->
+<!-- DIGITAL LR -->
 <div id="page-digital" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Digital LR</div>
     <h2>📱 Núcleo <span>Digital LR</span></h2>
     <p>Organizar e fortalecer toda a frente digital da LR Marketing.</p>
-    <div class="nmeta">
-      <div class="mchip">👤 Líder: A definir</div>
-      <div class="mchip">📅 Início: Abr/2025</div>
-      <div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div>
-    </div>
+    <div class="nmeta"><div class="mchip">👤 Líder: A definir</div><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
   </div>
   <div class="ncontent">
-    <div class="content-header">
-      <h3>Ficha do Núcleo</h3>
-      <button class="btn-red" onclick="toggleFicha('ficha-digital')">📋 Abrir / Fechar Ficha</button>
-    </div>
-    <div class="ficha" id="ficha-digital">
-      <div class="ficha-header">
-        <div><h4>Ficha de Cadastro Detalhada — Digital LR</h4><p>Preencha todos os campos e salve.</p></div>
-        <button class="ficha-toggle" onclick="toggleFicha('ficha-digital')">▾ Recolher</button>
-      </div>
-      <div class="ficha-body open" id="ficha-digital-body">
-        <div class="ficha-grid">
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>1. Dados Gerais do Núcleo</h5>
-              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Digital LR" /></div>
-              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder" /></div>
-              <div class="field-row">
-                <div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000" /></div>
-                <div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br" /></div>
-              </div>
-              <div class="field"><label>Objetivo do Núcleo</label><textarea rows="3" placeholder="Descreva o objetivo principal..."></textarea></div>
-              <div class="field-row">
-                <div class="field"><label>Data de Início</label><input type="date" /></div>
-                <div class="field"><label>Prazo / Meta</label><input type="date" /></div>
-              </div>
+    <div class="ficha">
+      <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Digital LR</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
+      <div class="ficha-body">
+        <div class="fgrid">
+          <div class="fcol">
+            <div class="fsec"><h5>1. Dados Gerais</h5>
+              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Digital LR"/></div>
+              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
+              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
+              <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
+              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
             </div>
-            <div class="ficha-section">
-              <h5>🌡️ Termômetro de Progresso</h5>
-              <div class="term-wrap">
-                <div class="term-num" id="term-digital-num">10<small>%</small></div>
-                <div class="term-area">
-                  <div class="term-bar"><div class="term-fill" id="term-digital-fill" style="width:10%"></div></div>
-                  <input type="range" min="0" max="100" value="10" style="width:100%;accent-color:var(--red);" oninput="updateTerm('digital',this.value)" />
-                </div>
-              </div>
+            <div class="fsec"><h5>🌡️ Termômetro</h5>
+              <div class="term-wrap"><div class="term-num" id="tn-digital">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-digital" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('digital',this.value)"/></div></div>
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>2. Equipe do Núcleo</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="team-digital">
-                  <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Nome" /></td>
-                    <td><input type="text" placeholder="Papel" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option value="analise">Em análise</option><option value="aprovado">Aprovado</option><option value="pendente">Pendente</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addTeamRow('team-digital')">+ Adicionar membro</button>
+          <div class="fcol">
+            <div class="fsec"><h5>2. Equipe</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="team-digital"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addTeam('team-digital')">+ Adicionar membro</button>
             </div>
-            <div class="ficha-section">
-              <h5>3. Projetos / Atividades</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="proj-digital">
-                  <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Nome do projeto" /></td>
-                    <td><input type="text" placeholder="Responsável" /></td>
-                    <td><input type="date" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addProjRow('proj-digital')">+ Adicionar projeto</button>
+            <div class="fsec"><h5>3. Projetos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-digital"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addProj('proj-digital')">+ Adicionar projeto</button>
+            </div>
+            <div class="fsec"><h5>4. Recursos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-digital"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addRec('rec-digital')">+ Adicionar recurso</button>
             </div>
           </div>
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>4. Recursos Necessários</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="rec-digital">
-                  <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Ferramenta / recurso" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option value="analise">Em análise</option><option value="aprovado">Disponível</option><option value="pendente">Pendente</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addRecRow('rec-digital')">+ Adicionar recurso</button>
-            </div>
-            <div class="ficha-section">
-              <h5>5. Observações e Próximos Passos</h5>
+          <div class="fcol">
+            <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-digital"></div>
-              <div class="obs-form">
-                <h6>+ Nova Observação</h6>
-                <div class="form-row">
-                  <div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div>
-                  <div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div>
-                </div>
-                <div class="form-row" style="grid-template-columns:1fr 1fr;gap:10px;">
-                  <div class="field"><label>Responsável</label><input type="text" placeholder="Nome" /></div>
-                  <div class="field"><label>Data</label><input type="date" /></div>
-                </div>
-                <button class="btn-save" style="margin-top:4px;" onclick="addObs('obs-digital',this)">Registrar</button>
-              </div>
+              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-digital',this)">Registrar</button></div>
             </div>
-            <div class="ficha-section">
-              <h5>6. Valores LR Presentes</h5>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;">
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Respeito nas relações</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Comprometimento real</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Responsabilidade com o cliente</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Ética profissional</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Agir com verdade</label>
-              </div>
-            </div>
+            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
           </div>
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="showToast()">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
 
-<!-- ===== INSIGHT LR ===== -->
+<!-- INSIGHT LR -->
 <div id="page-insight" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Insight LR</div>
     <h2>💡 Núcleo <span>Insight LR</span></h2>
     <p>Inteligência estratégica e geração de insights para clientes e para a LR.</p>
-    <div class="nmeta">
-      <div class="mchip">👤 Líder: A definir</div>
-      <div class="mchip">📅 Início: Abr/2025</div>
-      <div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div>
-    </div>
+    <div class="nmeta"><div class="mchip">👤 Líder: A definir</div><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
   </div>
   <div class="ncontent">
-    <div class="content-header">
-      <h3>Ficha do Núcleo</h3>
-      <button class="btn-red" onclick="toggleFicha('ficha-insight')">📋 Abrir / Fechar Ficha</button>
-    </div>
-    <div class="ficha" id="ficha-insight">
-      <div class="ficha-header">
-        <div><h4>Ficha de Cadastro Detalhada — Insight LR</h4><p>Preencha todos os campos e salve.</p></div>
-        <button class="ficha-toggle" onclick="toggleFicha('ficha-insight')">▾ Recolher</button>
-      </div>
-      <div class="ficha-body open" id="ficha-insight-body">
-        <div class="ficha-grid">
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>1. Dados Gerais do Núcleo</h5>
-              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Insight LR" /></div>
-              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder" /></div>
-              <div class="field-row">
-                <div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000" /></div>
-                <div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br" /></div>
-              </div>
-              <div class="field"><label>Objetivo do Núcleo</label><textarea rows="3" placeholder="Descreva o objetivo principal..."></textarea></div>
-              <div class="field-row">
-                <div class="field"><label>Data de Início</label><input type="date" /></div>
-                <div class="field"><label>Prazo / Meta</label><input type="date" /></div>
-              </div>
+    <div class="ficha">
+      <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Insight LR</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
+      <div class="ficha-body">
+        <div class="fgrid">
+          <div class="fcol">
+            <div class="fsec"><h5>1. Dados Gerais</h5>
+              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Insight LR"/></div>
+              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
+              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
+              <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
+              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
             </div>
-            <div class="ficha-section">
-              <h5>🌡️ Termômetro de Progresso</h5>
-              <div class="term-wrap">
-                <div class="term-num" id="term-insight-num">10<small>%</small></div>
-                <div class="term-area">
-                  <div class="term-bar"><div class="term-fill" id="term-insight-fill" style="width:10%"></div></div>
-                  <input type="range" min="0" max="100" value="10" style="width:100%;accent-color:var(--red);" oninput="updateTerm('insight',this.value)" />
-                </div>
-              </div>
+            <div class="fsec"><h5>🌡️ Termômetro</h5>
+              <div class="term-wrap"><div class="term-num" id="tn-insight">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-insight" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('insight',this.value)"/></div></div>
               <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>2. Equipe do Núcleo</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="team-insight">
-                  <thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Nome" /></td>
-                    <td><input type="text" placeholder="Papel" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option value="analise">Em análise</option><option value="aprovado">Aprovado</option><option value="pendente">Pendente</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addTeamRow('team-insight')">+ Adicionar membro</button>
+          <div class="fcol">
+            <div class="fsec"><h5>2. Equipe</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="team-insight"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addTeam('team-insight')">+ Adicionar membro</button>
             </div>
-            <div class="ficha-section">
-              <h5>3. Projetos / Atividades</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="proj-insight">
-                  <thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Nome do projeto" /></td>
-                    <td><input type="text" placeholder="Responsável" /></td>
-                    <td><input type="date" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addProjRow('proj-insight')">+ Adicionar projeto</button>
+            <div class="fsec"><h5>3. Projetos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-insight"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addProj('proj-insight')">+ Adicionar projeto</button>
+            </div>
+            <div class="fsec"><h5>4. Recursos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-insight"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addRec('rec-insight')">+ Adicionar recurso</button>
             </div>
           </div>
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>4. Recursos Necessários</h5>
-              <div class="table-wrapper">
-                <table class="dynamic-table" id="rec-insight">
-                  <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
-                  <tbody><tr>
-                    <td><input type="text" placeholder="Ferramenta / recurso" /></td>
-                    <td><select class="sel-status s-analise" onchange="colorSelect(this)"><option value="analise">Em análise</option><option value="aprovado">Disponível</option><option value="pendente">Pendente</option></select></td>
-                    <td><button class="btn-remove" onclick="removeRow(this)">✕</button></td>
-                  </tr></tbody>
-                </table>
-              </div>
-              <button class="btn-add-row" onclick="addRecRow('rec-insight')">+ Adicionar recurso</button>
-            </div>
-            <div class="ficha-section">
-              <h5>5. Observações e Próximos Passos</h5>
+          <div class="fcol">
+            <div class="fsec"><h5>5. Observações</h5>
               <div class="obs-list" id="obs-insight"></div>
-              <div class="obs-form">
-                <h6>+ Nova Observação</h6>
-                <div class="form-row">
-                  <div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div>
-                  <div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div>
-                </div>
-                <div class="form-row" style="grid-template-columns:1fr 1fr;gap:10px;">
-                  <div class="field"><label>Responsável</label><input type="text" placeholder="Nome" /></div>
-                  <div class="field"><label>Data</label><input type="date" /></div>
-                </div>
-                <button class="btn-save" style="margin-top:4px;" onclick="addObs('obs-insight',this)">Registrar</button>
-              </div>
+              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-insight',this)">Registrar</button></div>
             </div>
-            <div class="ficha-section">
-              <h5>6. Valores LR Presentes</h5>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;">
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Respeito nas relações</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Comprometimento real</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Responsabilidade com o cliente</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Ética profissional</label>
-                <label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer;"><input type="checkbox" style="accent-color:var(--red);" /> Agir com verdade</label>
-              </div>
-            </div>
+            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
           </div>
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="showToast()">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
 
-<!-- ===== PROCESSO ===== -->
+<!-- PROCESSO -->
 <div id="page-processo" class="page">
   <div class="nheader">
     <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Processo | Comunicação</div>
     <h2>⚙️ Núcleo <span>Processo | Comunicação</span></h2>
     <p>Padronizar processos internos e melhorar a comunicação entre times e com clientes.</p>
-    <div class="nmeta">
-      <div class="mchip">👤 Líder: A definir</div>
-      <div class="mchip">📅 Início: Abr/2025</div>
-      <div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div>
-    </div>
+    <div class="nmeta"><div class="mchip">👤 Líder: A definir</div><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
   </div>
   <div class="ncontent">
-    <div class="content-header">
-      <h3>Ficha do Núcleo</h3>
-      <button class="btn-red" onclick="toggleFicha('ficha-processo')">📋 Abrir / Fechar Ficha</button>
-    </div>
-    <div class="ficha" id="ficha-processo">
-      <div class="ficha-header">
-        <div><h4>Ficha de Cadastro Detalhada — Processo | Comunicação</h4><p>Preencha todos os campos e salve.</p></div>
-        <button class="ficha-toggle" onclick="toggleFicha('ficha-processo')">▾ Recolher</button>
+    <div class="ficha">
+      <div class="ficha-header"><div><h4>📋 Ficha do Núcleo Processo | Comunicação</h4><p>Preencha, edite e salve as informações do núcleo.</p></div></div>
+      <div class="ficha-body">
+        <div class="fgrid">
+          <div class="fcol">
+            <div class="fsec"><h5>1. Dados Gerais</h5>
+              <div class="field"><label>Nome do Núcleo</label><input type="text" value="Processo | Comunicação"/></div>
+              <div class="field"><label>Líder / Coordenador(a)</label><input type="text" placeholder="Nome do líder"/></div>
+              <div class="frow"><div class="field"><label>Telefone</label><input type="text" placeholder="(16) 9 0000-0000"/></div><div class="field"><label>E-mail</label><input type="email" placeholder="email@lr.com.br"/></div></div>
+              <div class="field"><label>Objetivo</label><textarea rows="3" placeholder="Objetivo do núcleo..."></textarea></div>
+              <div class="frow"><div class="field"><label>Data de Início</label><input type="date"/></div><div class="field"><label>Prazo / Meta</label><input type="date"/></div></div>
+            </div>
+            <div class="fsec"><h5>🌡️ Termômetro</h5>
+              <div class="term-wrap"><div class="term-num" id="tn-processo">10<small>%</small></div><div class="term-area"><div class="term-bar"><div class="term-fill" id="tf-processo" style="width:10%"></div></div><input type="range" min="0" max="100" value="10" oninput="updT('processo',this.value)"/></div></div>
+              <div class="field"><label>Comentário</label><textarea rows="2" placeholder="Como está o andamento?"></textarea></div>
+            </div>
+          </div>
+          <div class="fcol">
+            <div class="fsec"><h5>2. Equipe</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="team-processo"><thead><tr><th>Nome</th><th>Papel</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addTeam('team-processo')">+ Adicionar membro</button>
+            </div>
+            <div class="fsec"><h5>3. Projetos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-processo"><thead><tr><th>Projeto</th><th>Responsável</th><th>Prazo</th><th>Status</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addProj('proj-processo')">+ Adicionar projeto</button>
+            </div>
+            <div class="fsec"><h5>4. Recursos</h5>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-processo"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody><tr><td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td></tr></tbody></table></div>
+              <button class="btn-add-row" onclick="addRec('rec-processo')">+ Adicionar recurso</button>
+            </div>
+          </div>
+          <div class="fcol">
+            <div class="fsec"><h5>5. Observações</h5>
+              <div class="obs-list" id="obs-processo"></div>
+              <div class="obs-form"><h6>+ Nova Observação</h6><div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div><div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div><button class="btn-save" style="margin-top:4px" onclick="addObs('obs-processo',this)">Registrar</button></div>
+            </div>
+            <div class="fsec"><h5>6. Valores LR</h5><div class="val-checks"><label><input type="checkbox"/> Respeito nas relações</label><label><input type="checkbox"/> Comprometimento real</label><label><input type="checkbox"/> Responsabilidade com o cliente</label><label><input type="checkbox"/> Ética profissional</label><label><input type="checkbox"/> Agir com verdade</label></div></div>
+          </div>
+        </div>
       </div>
-      <div class="ficha-body open" id="ficha-processo-body">
-        <div class="ficha-grid">
-          <div class="ficha-col">
-            <div class="ficha-section">
-              <h5>1.
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="toast()">💾 Salvar Ficha</button></div>
+    </div>
+  </div>
+</div>
 
+<footer>LR <span>Marketing</span> · Plataforma de Cultura Interna · 2025</footer>
+
+<script>
+function goPage(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function updT(id,v){
+  document.getElementById('tn-'+id).innerHTML=v+'<small>%</small>';
+  document.getElementById('tf-'+id).style.width=v+'%';
+}
+
+function cSel(el){
+  el.className='s-att';
+  if(el.value==='Aprovado'||el.value==='Disponível'||el.value==='Concluído')el.className='s-ok';
+  if(el.value==='Pendente'||el.value==='Atrasado')el.className='s-no';
+}
+
+function rmRow(btn){btn.closest('tr').remove();}
+
+function addTeam(tid){
+  const tb=document.querySelector('#'+tid+' tbody');
+  const tr=document.createElement('tr');
+  tr.innerHTML='<td><input type="text" placeholder="Nome"/></td><td><input type="text" placeholder="Papel"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Aprovado</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
+  tb.appendChild(tr);
+}
+
+function addProj(tid){
+  const tb=document.querySelector('#'+tid+' tbody');
+  const tr=document.createElement('tr');
+  tr.innerHTML='<td><input type="text" placeholder="Nome do projeto"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em andamento</option><option>Concluído</option><option>Atrasado</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
+  tb.appendChild(tr);
+}
+
+function addRec(tid){
+  const tb=document.querySelector('#'+tid+' tbody');
+  const tr=document.createElement('tr');
+  tr.innerHTML='<td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
+  tb.appendChild(tr);
+}
+
+function addObs(listId,btn){
+  const form=btn.closest('.obs-form');
+  const txts=form.querySelectorAll('textarea');
+  const inps=form.querySelectorAll('input');
+  const prob=txts[0].value.trim();
+  const sol=txts[1].value.trim();
+  const resp=inps[0].value.trim()||'A definir';
+  const data=inps[1].value?new Date(inps[1].value).toLocaleDateString('pt-BR'):new Date().toLocaleDateString('pt-BR');
+  if(!prob){alert('Descreva a situação.');return;}
+  const list=document.getElementById(listId);
+  const item=document.createElement('div');
+  item.className='obs-item';
+  item.innerHTML='<div class="obs-meta"><strong>'+resp+'</strong> · '+data+'</div><div class="obs-prob">⚠️ '+prob+'</div>'+(sol?'<div class="obs-sol">✅ '+sol+'</div>':'');
+  list.appendChild(item);
+  txts.forEach(t=>t.value='');
+  inps.forEach(i=>i.value='');
+}
+
+function toast(){
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.querySelectorAll('.prog-fill').forEach(b=>{const w=b.style.width;b.style.width='0';setTimeout(()=>b.style.width=w,300);});
+  },500);
+});
+</script>
+</body>
+</html>
