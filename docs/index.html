@@ -21,66 +21,17 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .page{display:none;}
 .page.active{display:block;}
 
-/* HERO */
-.hero{
-  position:relative;
-  min-height:320px;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  padding:60px 60px;
-  overflow:hidden;
-}
-.hero::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:url('banner.png') center center / cover no-repeat;
-  filter:brightness(0.72);
-  z-index:0;
-}
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0) 100%);
-  z-index:0;
-}
-.hero-content{
-  position:relative;
-  z-index:1;
-  max-width:560px;
-}
-.hero h1{
-  font-size:36px;font-weight:900;
-  line-height:1.15;
-  margin-bottom:10px;
-  text-shadow:0 2px 10px rgba(0,0,0,0.6);
-}
+/* ── HERO ── */
+.hero{position:relative;min-height:320px;color:#fff;display:flex;align-items:center;justify-content:flex-start;padding:60px;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url('banner.png') center center / cover no-repeat;filter:brightness(0.72);z-index:0;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0) 100%);z-index:0;}
+.hero-content{position:relative;z-index:1;max-width:560px;}
+.hero h1{font-size:36px;font-weight:900;line-height:1.15;margin-bottom:10px;text-shadow:0 2px 10px rgba(0,0,0,0.6);}
 .hero h1 span{color:#ffd166;display:block;}
-.hero p{
-  font-size:15px;
-  color:rgba(255,255,255,0.9);
-  line-height:1.7;
-  margin-bottom:22px;
-  text-shadow:0 1px 6px rgba(0,0,0,0.5);
-  max-width:460px;
-}
-.badge{
-  display:inline-block;
-  background:rgba(0,0,0,0.65);
-  color:#ffd166;
-  font-size:11px;font-weight:700;
-  padding:7px 20px;
-  border-radius:999px;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  border:1px solid rgba(255,209,102,0.35);
-  backdrop-filter:blur(4px);
-}
+.hero p{font-size:15px;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:22px;text-shadow:0 1px 6px rgba(0,0,0,0.5);max-width:460px;}
+.badge{display:inline-block;background:rgba(0,0,0,0.65);color:#ffd166;font-size:11px;font-weight:700;padding:7px 20px;border-radius:999px;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,209,102,0.35);backdrop-filter:blur(4px);}
 
-/* IDENTITY CARDS */
+/* ── IDENTITY ── */
 .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
 .icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
 .icard:hover{transform:translateY(-4px);}
@@ -100,63 +51,31 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
-/* NUCLEOS HEADER */
-.nucleos-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 36px 16px;max-width:1200px;margin:0 auto;
-}
+/* ── NUCLEOS HEADER ── */
+.nucleos-header{display:flex;align-items:center;justify-content:space-between;padding:0 36px 16px;max-width:1200px;margin:0 auto;}
 .nucleos-header h3{font-size:14px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:2px;}
-.btn-novo-nucleo{
-  background:var(--red);color:white;border:none;
-  padding:9px 20px;border-radius:8px;cursor:pointer;
-  font-size:13px;font-weight:700;font-family:inherit;
-  display:flex;align-items:center;gap:8px;
-  transition:all 0.2s;box-shadow:0 4px 12px rgba(217,30,30,0.3);
-}
+.btn-novo-nucleo{background:var(--red);color:white;border:none;padding:9px 20px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;font-family:inherit;display:flex;align-items:center;gap:8px;transition:all 0.2s;box-shadow:0 4px 12px rgba(217,30,30,0.3);}
 .btn-novo-nucleo:hover{background:#b51818;transform:translateY(-1px);}
 
-/* MODAL */
-.modal-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,0.6);
-  z-index:200;display:none;align-items:center;justify-content:center;
-  backdrop-filter:blur(3px);
-}
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(3px);}
 .modal-overlay.open{display:flex;}
-.modal{
-  background:white;border-radius:var(--radius);padding:32px;
-  width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;
-}
+.modal{background:white;border-radius:var(--radius);padding:32px;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;}
 .modal h4{font-size:18px;font-weight:800;color:var(--dark);margin-bottom:4px;}
 .modal>p{font-size:13px;color:#aaa;margin-bottom:24px;}
-.modal-close{
-  position:absolute;top:16px;right:16px;background:var(--gray);border:none;
-  width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;
-  display:flex;align-items:center;justify-content:center;transition:all 0.2s;
-}
+.modal-close{position:absolute;top:16px;right:16px;background:var(--gray);border:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
 .modal-close:hover{background:var(--red);color:white;}
 .modal .field{display:flex;flex-direction:column;gap:4px;margin-bottom:14px;}
 .modal .field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
-.modal .field input,.modal .field textarea,.modal .field select{
-  border:1px solid var(--mid);border-radius:6px;padding:9px 12px;
-  font-size:13px;color:#333;background:white;font-family:inherit;
-  outline:none;transition:border-color 0.2s;resize:none;
-}
+.modal .field input,.modal .field textarea,.modal .field select{border:1px solid var(--mid);border-radius:6px;padding:9px 12px;font-size:13px;color:#333;background:white;font-family:inherit;outline:none;transition:border-color 0.2s;resize:none;}
 .modal .field input:focus,.modal .field textarea:focus,.modal .field select:focus{border-color:var(--red);}
 .modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;}
-.btn-cancel{
-  background:var(--gray);color:#555;border:1px solid var(--mid);
-  padding:9px 18px;border-radius:8px;cursor:pointer;
-  font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;
-}
+.btn-cancel{background:var(--gray);color:#555;border:1px solid var(--mid);padding:9px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-cancel:hover{border-color:var(--red);color:var(--red);}
-.btn-criar{
-  background:var(--dark);color:white;border:none;
-  padding:9px 22px;border-radius:8px;cursor:pointer;
-  font-size:13px;font-weight:700;font-family:inherit;transition:all 0.2s;
-}
+.btn-criar{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;font-family:inherit;transition:all 0.2s;}
 .btn-criar:hover{background:var(--red);}
 
-/* NUCLEO CARDS */
+/* ── NUCLEO CARDS ── */
 .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:0 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
@@ -171,17 +90,12 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prog-label{font-size:10px;color:#aaa;margin-top:3px;text-align:right;}
 .lider-chip{font-size:11px;color:#888;margin-top:2px;margin-bottom:6px;}
 .lider-chip strong{color:var(--red);}
-.ncard-novo{
-  background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);
-  border:2px dashed #ddd;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;
-  cursor:pointer;transition:all 0.2s;min-height:180px;color:#bbb;
-}
+.ncard-novo{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:2px dashed #ddd;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;transition:all 0.2s;min-height:180px;color:#bbb;}
 .ncard-novo:hover{border-color:var(--red);color:var(--red);}
 .ncard-novo .plus{font-size:36px;margin-bottom:8px;}
 .ncard-novo span{font-size:13px;font-weight:600;}
 
-/* NUCLEO PAGE */
+/* ── NUCLEO PAGE ── */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
 .breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
 .breadcrumb span{cursor:pointer;transition:color 0.2s;}
@@ -194,7 +108,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 
 .ncontent{padding:32px 24px;max-width:1180px;margin:0 auto;}
 
-/* FICHA */
+/* ── FICHA ── */
 .ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
 .ficha-header{background:var(--dark);color:white;padding:16px 22px;}
 .ficha-header h4{font-size:14px;font-weight:700;}
@@ -203,13 +117,11 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
 .fcol{display:flex;flex-direction:column;gap:16px;}
 .fsec h5{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;padding-bottom:5px;border-bottom:2px solid var(--red);}
-
 .field{display:flex;flex-direction:column;gap:4px;margin-bottom:8px;}
 .field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
 .field input,.field textarea,.field select{border:1px solid var(--mid);border-radius:6px;padding:7px 10px;font-size:13px;color:#333;background:white;font-family:inherit;outline:none;transition:border-color 0.2s;resize:none;}
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-
 .dtable{width:100%;border-collapse:collapse;font-size:12px;}
 .dtable th{background:var(--dark);color:white;padding:8px 10px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
 .dtable td{padding:5px 4px;border-bottom:1px solid var(--mid);}
@@ -219,11 +131,9 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .btn-rm{background:#fee;border:1px solid #fdd;color:var(--red);border-radius:4px;padding:3px 7px;cursor:pointer;font-size:11px;font-family:inherit;}
 .btn-add-row{background:var(--gray);border:1px dashed #ccc;color:#666;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-family:inherit;margin-top:6px;transition:all 0.2s;width:100%;text-align:center;}
 .btn-add-row:hover{border-color:var(--red);color:var(--red);}
-
 .s-ok{background:#d4edda;color:#155724;}
 .s-att{background:#fff3cd;color:#856404;}
 .s-no{background:#f8d7da;color:#721c24;}
-
 .term-wrap{background:var(--gray);border-radius:10px;padding:16px;display:flex;align-items:center;gap:16px;margin-bottom:10px;}
 .term-num{font-size:44px;font-weight:900;color:var(--dark);min-width:80px;text-align:center;}
 .term-num small{font-size:16px;color:#aaa;}
@@ -231,7 +141,6 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .term-bar{height:14px;background:var(--mid);border-radius:10px;overflow:hidden;margin-bottom:8px;}
 .term-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--red),#ff6b6b);transition:width 0.5s;}
 .term-area input[type=range]{width:100%;accent-color:var(--red);}
-
 .obs-list{position:relative;padding-left:18px;margin-bottom:12px;}
 .obs-list::before{content:'';position:absolute;left:4px;top:0;bottom:0;width:2px;background:var(--mid);}
 .obs-item{position:relative;margin-bottom:12px;background:white;border:1px solid var(--mid);border-radius:8px;padding:12px 14px;}
@@ -243,16 +152,13 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .obs-form{background:var(--gray);border-radius:8px;padding:14px;margin-top:10px;}
 .obs-form h6{font-size:10px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:700;}
 .obs-form .orow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;}
-
 .ficha-footer{padding:0 26px 26px;display:flex;justify-content:flex-end;gap:10px;}
 .btn-save{background:var(--dark);color:white;border:none;padding:9px 22px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-save:hover{background:var(--red);}
 .btn-print{background:var(--gray);color:var(--dark);border:1px solid var(--mid);padding:9px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;}
 .btn-print:hover{border-color:var(--red);color:var(--red);}
-
 .toast{position:fixed;bottom:28px;right:28px;background:#155724;color:white;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:999;}
 .toast.show{opacity:1;}
-
 footer{background:var(--dark);color:rgba(255,255,255,0.4);text-align:center;padding:20px;font-size:11px;margin-top:50px;}
 footer span{color:var(--red);}
 
@@ -270,7 +176,7 @@ footer span{color:var(--red);}
 </head>
 <body>
 
-<!-- MODAL NOVO NÚCLEO -->
+<!-- MODAL -->
 <div class="modal-overlay" id="modal-nucleo">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
@@ -312,7 +218,6 @@ footer span{color:var(--red);}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-
   <div class="hero">
     <div class="hero-content">
       <h1>Cultura <span>LR Marketing</span></h1>
@@ -339,7 +244,7 @@ footer span{color:var(--red);}
   </div>
 
   <div class="ngrid" id="ngrid-home">
-    <div class="ncard" onclick="goPage('ai')">
+    <div class="ncard" onclick="goPage('ai',null)">
       <div class="nico">🤖</div><h3>Núcleo AI</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-ai">A definir</strong></div>
       <p>Aplicação de IA no dia a dia da LR para elevar produtividade e qualidade.</p>
@@ -350,7 +255,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-ai" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-ai">0% concluído</div>
     </div>
-    <div class="ncard" onclick="goPage('digital')">
+    <div class="ncard" onclick="goPage('digital',null)">
       <div class="nico">📱</div><h3>Digital LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-digital">A definir</strong></div>
       <p>Fortalecer toda a frente digital da LR Marketing.</p>
@@ -361,7 +266,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-digital" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-digital">0% concluído</div>
     </div>
-    <div class="ncard" onclick="goPage('insight')">
+    <div class="ncard" onclick="goPage('insight',null)">
       <div class="nico">💡</div><h3>Insight LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-insight">A definir</strong></div>
       <p>Inteligência estratégica e geração de insights para clientes e LR.</p>
@@ -372,7 +277,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-insight" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-insight">0% concluído</div>
     </div>
-    <div class="ncard" onclick="goPage('processo')">
+    <div class="ncard" onclick="goPage('processo',null)">
       <div class="nico">⚙️</div><h3>Processo | Comunicação</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-processo">A definir</strong></div>
       <p>Padronizar processos e melhorar comunicação interna.</p>
@@ -388,13 +293,12 @@ footer span{color:var(--red);}
       <span>Criar novo núcleo</span>
     </div>
   </div>
-
 </div>
 
 <!-- NUCLEO AI -->
 <div id="page-ai" class="page">
   <div class="nheader">
-    <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Núcleo AI</div>
+    <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Núcleo AI</div>
     <h2>🤖 Núcleo <span>AI</span></h2>
     <p>Aplicar inteligência artificial no dia a dia da LR, aumentando produtividade e melhorando as entregas.</p>
     <div class="nmeta"><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(40,167,69,0.3);border-color:#28a745;">🟢 Em andamento</div></div>
@@ -460,7 +364,7 @@ footer span{color:var(--red);}
 <!-- DIGITAL LR -->
 <div id="page-digital" class="page">
   <div class="nheader">
-    <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Digital LR</div>
+    <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Digital LR</div>
     <h2>📱 Núcleo <span>Digital LR</span></h2>
     <p>Organizar e fortalecer toda a frente digital da LR Marketing.</p>
     <div class="nmeta"><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
@@ -526,7 +430,7 @@ footer span{color:var(--red);}
 <!-- INSIGHT LR -->
 <div id="page-insight" class="page">
   <div class="nheader">
-    <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Insight LR</div>
+    <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Insight LR</div>
     <h2>💡 Núcleo <span>Insight LR</span></h2>
     <p>Inteligência estratégica e geração de insights para clientes e para a LR.</p>
     <div class="nmeta"><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
@@ -592,7 +496,7 @@ footer span{color:var(--red);}
 <!-- PROCESSO -->
 <div id="page-processo" class="page">
   <div class="nheader">
-    <div class="breadcrumb"><span onclick="goPage('home')">🏠 Home</span> › Processo | Comunicação</div>
+    <div class="breadcrumb"><span onclick="goPage('home',null)">🏠 Home</span> › Processo | Comunicação</div>
     <h2>⚙️ Núcleo <span>Processo | Comunicação</span></h2>
     <p>Padronizar processos internos e melhorar a comunicação entre times e com clientes.</p>
     <div class="nmeta"><div class="mchip">📅 Início: Abr/2025</div><div class="mchip" style="background:rgba(255,193,7,0.3);border-color:#ffc107;">🟡 Em formação</div></div>
@@ -717,12 +621,14 @@ function addObs(listId,btn){
   item.className='obs-item';
   item.innerHTML='<div class="obs-meta"><strong>'+resp+'</strong> · '+data+'</div><div class="obs-prob">⚠️ '+prob+'</div>'+(sol?'<div class="obs-sol">✅ '+sol+'</div>':'');
   list.appendChild(item);
-  txts.forEach(t=>t.value='');inps.forEach(i=>i.value='');
+  txts.forEach(t=>t.value='');
+  inps.forEach(i=>i.value='');
 }
 
 function openModal(){
   document.getElementById('modal-nucleo').classList.add('open');
 }
+
 function closeModal(){
   document.getElementById('modal-nucleo').classList.remove('open');
   document.getElementById('novo-nome').value='';
@@ -741,7 +647,6 @@ function criarNucleo(){
   const lider=document.getElementById('novo-lider').value.trim()||'A definir';
   const status=document.getElementById('novo-status').value;
   if(!nome){alert('Informe o nome do núcleo.');return;}
-
   const grid=document.getElementById('ngrid-home');
   const placeholder=grid.querySelector('.ncard-novo');
   const card=document.createElement('div');
@@ -760,13 +665,35 @@ function criarNucleo(){
     <div class="prog-label">0% concluído</div>
   `;
   grid.insertBefore(card,placeholder);
-
   const extras=JSON.parse(localStorage.getItem('nucleos-extras')||'[]');
   extras.push({nome,icone,desc,lider,status});
   localStorage.setItem('nucleos-extras',JSON.stringify(extras));
-
   closeModal();
   showToast();
+}
+
+function carregarExtras(){
+  const extras=JSON.parse(localStorage.getItem('nucleos-extras')||'[]');
+  const grid=document.getElementById('ngrid-home');
+  const placeholder=grid.querySelector('.ncard-novo');
+  extras.forEach(e=>{
+    const card=document.createElement('div');
+    card.className='ncard';
+    card.innerHTML=`
+      <div class="nico">${e.icone}</div>
+      <h3>${e.nome}</h3>
+      <div class="lider-chip">👤 Líder: <strong>${e.lider}</strong></div>
+      <p>${e.desc}</p>
+      <div class="nstats">
+        <div class="sbadge"><strong>0</strong>Checklist</div>
+        <div class="sbadge"><strong>0</strong>Equipe</div>
+      </div>
+      <div style="margin-top:8px"><span style="font-size:11px;color:#888;">${statusLabel[e.status]}</span></div>
+      <div class="prog" style="margin-top:8px"><div class="prog-fill" style="width:0%"></div></div>
+      <div class="prog-label">0% concluído</div>
+    `;
+    grid.insertBefore(card,placeholder);
+  });
 }
 
 function saveFicha(id){
@@ -782,14 +709,5 @@ function saveFicha(id){
   };
   document.querySelectorAll('#team-'+id+' tbody tr').forEach(tr=>{
     const c=tr.querySelectorAll('td');
-    if(c.length>=2)data.team.push({nome:c[0].querySelector('input').value,papel:c[1].querySelector('input').value});
-  });
-  document.querySelectorAll('#proj-'+id+' tbody tr').forEach(tr=>{
-    const c=tr.querySelectorAll('td');
-    if(c.length>=4)data.check.push({done:c[0].querySelector('input').checked,tarefa:c[1].querySelector('input').value,resp:c[2].querySelector('input').value,prazo:c[3].querySelector('input').value});
-  });
-  document.querySelectorAll('#rec-'+id+' tbody tr').forEach(tr=>{
-    const c=tr.querySelectorAll('td');
-    if(c.length>=2)data.rec.push({nome:c[0].querySelector('input').value,status:c[1].querySelector('select').value});
-  });
+    if(c.
 
