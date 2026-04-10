@@ -37,14 +37,14 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
   position:absolute;
   inset:0;
   background:url('banner.png') center center / cover no-repeat;
-  filter:brightness(0.45);
+  filter:brightness(0.72);
   z-index:0;
 }
 .hero::after{
   content:'';
   position:absolute;
   inset:0;
-  background:linear-gradient(90deg,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.1) 100%);
+  background:linear-gradient(90deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.25) 55%,rgba(0,0,0,0) 100%);
   z-index:0;
 }
 .hero-content{
@@ -54,8 +54,8 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 }
 .hero-logo{
   width:66px;height:66px;
-  background:rgba(0,0,0,0.6);
-  border:2px solid rgba(255,255,255,0.15);
+  background:rgba(0,0,0,0.5);
+  border:2px solid rgba(255,255,255,0.2);
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   margin-bottom:16px;
@@ -67,23 +67,20 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
   font-size:36px;font-weight:900;
   line-height:1.15;
   margin-bottom:10px;
-  text-shadow:0 2px 12px rgba(0,0,0,0.8);
+  text-shadow:0 2px 10px rgba(0,0,0,0.6);
 }
-.hero h1 span{
-  color:#ffd166;
-  display:block;
-}
+.hero h1 span{color:#ffd166;display:block;}
 .hero p{
   font-size:15px;
-  color:rgba(255,255,255,0.85);
+  color:rgba(255,255,255,0.9);
   line-height:1.7;
   margin-bottom:22px;
-  text-shadow:0 1px 6px rgba(0,0,0,0.7);
+  text-shadow:0 1px 6px rgba(0,0,0,0.5);
   max-width:460px;
 }
 .badge{
   display:inline-block;
-  background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.65);
   color:#ffd166;
   font-size:11px;font-weight:700;
   padding:7px 20px;
@@ -114,8 +111,93 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
+/* ── LINHA DOS NÚCLEOS (título + botão novo) ─────── */
+.nucleos-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 36px 16px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.nucleos-header h3{font-size:14px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:2px;}
+.btn-novo-nucleo{
+  background:var(--red);
+  color:white;
+  border:none;
+  padding:9px 20px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
+  font-family:inherit;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:all 0.2s;
+  box-shadow:0 4px 12px rgba(217,30,30,0.3);
+}
+.btn-novo-nucleo:hover{background:#b51818;transform:translateY(-1px);}
+
+/* ── MODAL NOVO NÚCLEO ───────────────────────────── */
+.modal-overlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,0.6);
+  z-index:200;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:blur(3px);
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:white;
+  border-radius:var(--radius);
+  padding:32px;
+  width:100%;
+  max-width:440px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+  position:relative;
+}
+.modal h4{
+  font-size:18px;font-weight:800;
+  color:var(--dark);margin-bottom:4px;
+}
+.modal p{font-size:13px;color:#aaa;margin-bottom:24px;}
+.modal-close{
+  position:absolute;top:16px;right:16px;
+  background:var(--gray);border:none;
+  width:32px;height:32px;border-radius:50%;
+  cursor:pointer;font-size:16px;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s;
+}
+.modal-close:hover{background:var(--red);color:white;}
+.modal .field{display:flex;flex-direction:column;gap:4px;margin-bottom:14px;}
+.modal .field label{font-size:10px;color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.modal .field input,.modal .field textarea,.modal .field select{
+  border:1px solid var(--mid);border-radius:6px;
+  padding:9px 12px;font-size:13px;color:#333;
+  background:white;font-family:inherit;outline:none;
+  transition:border-color 0.2s;resize:none;
+}
+.modal .field input:focus,.modal .field textarea:focus,.modal .field select:focus{border-color:var(--red);}
+.modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:6px;}
+.btn-cancel{
+  background:var(--gray);color:#555;border:1px solid var(--mid);
+  padding:9px 18px;border-radius:8px;cursor:pointer;
+  font-size:13px;font-weight:600;font-family:inherit;transition:all 0.2s;
+}
+.btn-cancel:hover{border-color:var(--red);color:var(--red);}
+.btn-criar{
+  background:var(--dark);color:white;border:none;
+  padding:9px 22px;border-radius:8px;cursor:pointer;
+  font-size:13px;font-weight:700;font-family:inherit;transition:all 0.2s;
+}
+.btn-criar:hover{background:var(--red);}
+
 /* ── CARDS NÚCLEOS ───────────────────────────────── */
-.ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:16px 36px 56px;max-width:1200px;margin:0 auto;}
+.ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:0 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
 .ncard .nico{font-size:32px;margin-bottom:10px;}
@@ -129,6 +211,25 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .prog-label{font-size:10px;color:#aaa;margin-top:3px;text-align:right;}
 .lider-chip{font-size:11px;color:#888;margin-top:2px;margin-bottom:6px;}
 .lider-chip strong{color:var(--red);}
+
+/* card de novo núcleo (placeholder) */
+.ncard-novo{
+  background:white;
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow);
+  border:2px dashed #ddd;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.2s;
+  min-height:180px;
+  color:#bbb;
+}
+.ncard-novo:hover{border-color:var(--red);color:var(--red);}
+.ncard-novo .plus{font-size:36px;margin-bottom:8px;}
+.ncard-novo span{font-size:13px;font-weight:600;}
 
 /* ── PÁGINA INTERNA ──────────────────────────────── */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
@@ -210,16 +311,40 @@ footer span{color:var(--red);}
 @media(max-width:1100px){.fgrid{grid-template-columns:1fr 1fr;}}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr;}}
 @media(max-width:700px){
-  header{padding:12px 16px;}
-  nav{display:none;}
+  header{padding:12px 16px;}nav{display:none;}
   .hero{padding:40px 20px;min-height:260px;}
   .hero h1{font-size:22px;}
   .igrid,.ngrid{padding:16px;}
   .ncontent{padding:18px;}
+  .nucleos-header{padding:0 16px 14px;}
 }
 </style>
 </head>
 <body>
+
+<!-- MODAL NOVO NÚCLEO -->
+<div class="modal-overlay" id="modal-nucleo">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h4>+ Novo Núcleo</h4>
+    <p>Preencha as informações básicas para criar um novo núcleo.</p>
+    <div class="field"><label>Nome do Núcleo</label><input type="text" id="novo-nome" placeholder="Ex: Comercial LR"/></div>
+    <div class="field"><label>Ícone (emoji)</label><input type="text" id="novo-icone" placeholder="Ex: 🚀" maxlength="4"/></div>
+    <div class="field"><label>Descrição breve</label><textarea rows="2" id="novo-desc" placeholder="O que esse núcleo faz..."></textarea></div>
+    <div class="field"><label>Líder</label><input type="text" id="novo-lider" placeholder="Nome do líder"/></div>
+    <div class="field"><label>Status</label>
+      <select id="novo-status">
+        <option value="formacao">🟡 Em formação</option>
+        <option value="andamento">🟢 Em andamento</option>
+        <option value="planejado">🔵 Planejado</option>
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-criar" onclick="criarNucleo()">✦ Criar Núcleo</button>
+    </div>
+  </div>
+</div>
 
 <div class="toast" id="toast">✅ Ficha salva!</div>
 
@@ -256,9 +381,18 @@ footer span{color:var(--red);}
     <div class="icard icard-dark"><div class="ico">🔥</div><h3>Propósito</h3><div class="prop-text">Ser Foda.</div><p>Entregar o melhor, sempre. Superar expectativas. Deixar marca.</p></div>
   </div>
 
-  <div class="sec-title"><h2>Nossos <span>Núcleos</span></h2><p>Clique em um núcleo para acessar e preencher sua ficha completa.</p></div>
+  <div class="sec-title">
+    <h2>Nossos <span>Núcleos</span></h2>
+    <p>Clique em um núcleo para acessar e preencher sua ficha completa.</p>
+  </div>
 
-  <div class="ngrid">
+  <div class="nucleos-header">
+    <h3>Núcleos ativos</h3>
+    <button class="btn-novo-nucleo" onclick="openModal()">+ Novo Núcleo</button>
+  </div>
+
+  <div class="ngrid" id="ngrid-home">
+
     <div class="ncard" onclick="goPage('ai')">
       <div class="nico">🤖</div><h3>Núcleo AI</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-ai">A definir</strong></div>
@@ -270,6 +404,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-ai" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-ai">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('digital')">
       <div class="nico">📱</div><h3>Digital LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-digital">A definir</strong></div>
@@ -281,6 +416,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-digital" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-digital">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('insight')">
       <div class="nico">💡</div><h3>Insight LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-insight">A definir</strong></div>
@@ -292,6 +428,7 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-insight" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-insight">0% concluído</div>
     </div>
+
     <div class="ncard" onclick="goPage('processo')">
       <div class="nico">⚙️</div><h3>Processo | Comunicação</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-processo">A definir</strong></div>
@@ -303,8 +440,14 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-processo" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-processo">0% concluído</div>
     </div>
-  </div>
 
+    <!-- card placeholder -->
+    <div class="ncard-novo" onclick="openModal()">
+      <div class="plus">＋</div>
+      <span>Criar novo núcleo</span>
+    </div>
+
+  </div>
 </div>
 
 <!-- NUCLEO AI -->
@@ -343,26 +486,17 @@ footer span{color:var(--red);}
           </div>
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="team-ai">
-                <thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead>
-                <tbody></tbody>
-              </table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="team-ai"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
               <button class="btn-add-row" onclick="addTeam('team-ai')">+ Adicionar membro</button>
             </div>
             <div class="fsec"><h5>3. Checklist</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="proj-ai">
-                <thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead>
-                <tbody></tbody>
-              </table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="proj-ai"><thead><tr><th>✓</th><th>Tarefa</th><th>Responsável</th><th>Prazo</th><th></th></tr></thead><tbody></tbody></table></div>
               <button class="btn-add-row" onclick="addChecklist('proj-ai')">+ Adicionar item</button>
             </div>
           </div>
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
-              <div style="overflow-x:auto"><table class="dtable" id="rec-ai">
-                <thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead>
-                <tbody></tbody>
-              </table></div>
+              <div style="overflow-x:auto"><table class="dtable" id="rec-ai"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
               <button class="btn-add-row" onclick="addRec('rec-ai')">+ Adicionar recurso</button>
             </div>
             <div class="fsec"><h5>5. Observações</h5>
@@ -645,136 +779,61 @@ function addObs(listId,btn){
   txts.forEach(t=>t.value='');inps.forEach(i=>i.value='');
 }
 
-function saveFicha(id){
-  const data={
-    nome:document.getElementById('f-'+id+'-nome').value,
-    lider:document.getElementById('f-'+id+'-lider').value,
-    obj:document.getElementById('f-'+id+'-obj').value,
-    inicio:document.getElementById('f-'+id+'-inicio').value,
-    prazo:document.getElementById('f-'+id+'-prazo').value,
-    pct:document.getElementById('range-'+id).value,
-    coment:document.getElementById('f-'+id+'-coment').value,
-    team:[],check:[],rec:[]
-  };
-
-  document.querySelectorAll('#team-'+id+' tbody tr').forEach(tr=>{
-    const cols=tr.querySelectorAll('td');
-    if(cols.length>=2){
-      data.team.push({
-        nome:cols[0].querySelector('input').value,
-        papel:cols[1].querySelector('input').value
-      });
-    }
-  });
-
-  document.querySelectorAll('#proj-'+id+' tbody tr').forEach(tr=>{
-    const cols=tr.querySelectorAll('td');
-    if(cols.length>=4){
-      data.check.push({
-        done:cols[0].querySelector('input').checked,
-        tarefa:cols[1].querySelector('input').value,
-        resp:cols[2].querySelector('input').value,
-        prazo:cols[3].querySelector('input').value
-      });
-    }
-  });
-
-  document.querySelectorAll('#rec-'+id+' tbody tr').forEach(tr=>{
-    const cols=tr.querySelectorAll('td');
-    if(cols.length>=2){
-      data.rec.push({
-        nome:cols[0].querySelector('input').value,
-        status:cols[1].querySelector('select').value
-      });
-    }
-  });
-
-  localStorage.setItem('nucleo-'+id,JSON.stringify(data));
-  updateDash();
-  showToast();
+// ── MODAL NOVO NÚCLEO ──────────────────────────────
+function openModal(){
+  document.getElementById('modal-nucleo').classList.add('open');
+}
+function closeModal(){
+  document.getElementById('modal-nucleo').classList.remove('open');
+  document.getElementById('novo-nome').value='';
+  document.getElementById('novo-icone').value='';
+  document.getElementById('novo-desc').value='';
+  document.getElementById('novo-lider').value='';
+  document.getElementById('novo-status').value='formacao';
 }
 
-function loadFicha(id){
-  const raw=localStorage.getItem('nucleo-'+id);
-  if(!raw)return;
-  const d=JSON.parse(raw);
+const statusLabel={
+  formacao:'🟡 Em formação',
+  andamento:'🟢 Em andamento',
+  planejado:'🔵 Planejado'
+};
 
-  document.getElementById('f-'+id+'-nome').value=d.nome||'';
-  document.getElementById('f-'+id+'-lider').value=d.lider||'';
-  document.getElementById('f-'+id+'-obj').value=d.obj||'';
-  document.getElementById('f-'+id+'-inicio').value=d.inicio||'';
-  document.getElementById('f-'+id+'-prazo').value=d.prazo||'';
-  document.getElementById('f-'+id+'-coment').value=d.coment||'';
+function criarNucleo(){
+  const nome=document.getElementById('novo-nome').value.trim();
+  const icone=document.getElementById('novo-icone').value.trim()||'🏷️';
+  const desc=document.getElementById('novo-desc').value.trim()||'Núcleo em estruturação.';
+  const lider=document.getElementById('novo-lider').value.trim()||'A definir';
+  const status=document.getElementById('novo-status').value;
 
-  const pct=d.pct||0;
-  document.getElementById('range-'+id).value=pct;
-  updT(id,pct);
+  if(!nome){alert('Informe o nome do núcleo.');return;}
 
-  const teamTb=document.querySelector('#team-'+id+' tbody');
-  teamTb.innerHTML='';
-  (d.team||[]).forEach(m=>{
-    addTeam('team-'+id);
-    const rows=teamTb.querySelectorAll('tr');
-    const last=rows[rows.length-1];
-    const cols=last.querySelectorAll('td');
-    cols[0].querySelector('input').value=m.nome;
-    cols[1].querySelector('input').value=m.papel;
-  });
+  const grid=document.getElementById('ngrid-home');
+  const placeholder=grid.querySelector('.ncard-novo');
 
-  const projTb=document.querySelector('#proj-'+id+' tbody');
-  projTb.innerHTML='';
-  (d.check||[]).forEach(c=>{
-    addChecklist('proj-'+id);
-    const rows=projTb.querySelectorAll('tr');
-    const last=rows[rows.length-1];
-    const cols=last.querySelectorAll('td');
-    cols[0].querySelector('input').checked=c.done;
-    cols[1].querySelector('input').value=c.tarefa;
-    cols[2].querySelector('input').value=c.resp;
-    cols[3].querySelector('input').value=c.prazo;
-  });
+  const card=document.createElement('div');
+  card.className='ncard';
+  card.innerHTML=`
+    <div class="nico">${icone}</div>
+    <h3>${nome}</h3>
+    <div class="lider-chip">👤 Líder: <strong>${lider}</strong></div>
+    <p>${desc}</p>
+    <div class="nstats">
+      <div class="sbadge"><strong>0</strong>Checklist</div>
+      <div class="sbadge"><strong>0</strong>Equipe</div>
+    </div>
+    <div style="margin-top:8px">
+      <span style="font-size:11px;color:#888;">${statusLabel[status]}</span>
+    </div>
+    <div class="prog" style="margin-top:8px"><div class="prog-fill" style="width:0%"></div></div>
+    <div class="prog-label">0% concluído</div>
+  `;
 
-  const recTb=document.querySelector('#rec-'+id+' tbody');
-  recTb.innerHTML='';
-  (d.rec||[]).forEach(r=>{
-    addRec('rec-'+id);
-    const rows=recTb.querySelectorAll('tr');
-    const last=rows[rows.length-1];
-    const cols=last.querySelectorAll('td');
-    cols[0].querySelector('input').value=r.nome;
-    const sel=cols[1].querySelector('select');
-    sel.value=r.status;
-    cSel(sel);
-  });
-}
+  grid.insertBefore(card,placeholder);
 
-function updateDash(){
-  NUCLEOS.forEach(id=>{
-    const raw=localStorage.getItem('nucleo-'+id);
-    if(!raw)return;
-    const d=JSON.parse(raw);
-    const lider=d.lider&&d.lider.trim()?d.lider.trim():'A definir';
-    const nCheck=(d.check||[]).filter(c=>c.tarefa&&c.tarefa.trim()).length;
-    const nTeam=(d.team||[]).filter(t=>t.nome&&t.nome.trim()).length;
-    const pct=d.pct||0;
-    document.getElementById('dash-lider-'+id).textContent=lider;
-    document.getElementById('dash-proj-'+id).textContent=nCheck;
-    document.getElementById('dash-team-'+id).textContent=nTeam;
-    document.getElementById('dash-prog-'+id).style.width=pct+'%';
-    document.getElementById('dash-pct-'+id).textContent=pct+'% concluído';
-  });
-}
+  const nucleosExtras=JSON.parse(localStorage.getItem('nucleos-extras')||'[]');
+  nucleosExtras.push({nome,icone,desc,lider,status});
+  localStorage.setItem('nucleos-extras',JSON.stringify(nucleosExtras));
 
-function showToast(){
-  const t=document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2500);
-}
+  closeModal();
+  showToast2('✅ Núcleo "'+nome+'"
 
-window.addEventListener('load',()=>{
-  NUCLEOS.forEach(id=>loadFicha(id));
-  updateDash();
-});
-</script>
-</body>
-</html>
