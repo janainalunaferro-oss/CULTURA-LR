@@ -21,15 +21,80 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .page{display:none;}
 .page.active{display:block;}
 
-.hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d0a0a 50%,#1a1a1a 100%);color:white;padding:70px 40px 50px;text-align:center;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-50%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(217,30,30,0.15) 0%,transparent 70%);border-radius:50%;}
-.hero-logo{width:90px;height:90px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;position:relative;z-index:1;box-shadow:0 0 40px rgba(217,30,30,0.4);overflow:hidden;}
-.hero-logo img{width:78px;object-fit:contain;}
-.hero h1{font-size:38px;font-weight:800;margin-bottom:8px;position:relative;z-index:1;}
-.hero h1 span{color:var(--red);}
-.hero p{font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:28px;position:relative;z-index:1;}
-.badge{display:inline-block;background:var(--red);color:white;font-size:12px;font-weight:700;padding:6px 22px;border-radius:20px;letter-spacing:3px;text-transform:uppercase;position:relative;z-index:1;}
+/* ── HERO COM BANNER ─────────────────────────────── */
+.hero{
+  position:relative;
+  min-height:320px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:60px 60px;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url('banner.png') center center / cover no-repeat;
+  filter:brightness(0.45);
+  z-index:0;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.45) 50%,rgba(0,0,0,0.1) 100%);
+  z-index:0;
+}
+.hero-content{
+  position:relative;
+  z-index:1;
+  max-width:560px;
+}
+.hero-logo{
+  width:66px;height:66px;
+  background:rgba(0,0,0,0.6);
+  border:2px solid rgba(255,255,255,0.15);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+  box-shadow:0 0 24px rgba(217,30,30,0.4);
+  overflow:hidden;
+}
+.hero-logo img{width:50px;object-fit:contain;}
+.hero h1{
+  font-size:36px;font-weight:900;
+  line-height:1.15;
+  margin-bottom:10px;
+  text-shadow:0 2px 12px rgba(0,0,0,0.8);
+}
+.hero h1 span{
+  color:#ffd166;
+  display:block;
+}
+.hero p{
+  font-size:15px;
+  color:rgba(255,255,255,0.85);
+  line-height:1.7;
+  margin-bottom:22px;
+  text-shadow:0 1px 6px rgba(0,0,0,0.7);
+  max-width:460px;
+}
+.badge{
+  display:inline-block;
+  background:rgba(0,0,0,0.75);
+  color:#ffd166;
+  font-size:11px;font-weight:700;
+  padding:7px 20px;
+  border-radius:999px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  border:1px solid rgba(255,209,102,0.35);
+  backdrop-filter:blur(4px);
+}
 
+/* ── CARDS IDENTIDADE ────────────────────────────── */
 .igrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;padding:36px;max-width:1200px;margin:0 auto;}
 .icard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border-top:4px solid var(--red);transition:transform 0.2s;}
 .icard:hover{transform:translateY(-4px);}
@@ -49,6 +114,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .sec-title h2 span{color:var(--red);}
 .sec-title p{color:#888;font-size:14px;margin-top:6px;}
 
+/* ── CARDS NÚCLEOS ───────────────────────────────── */
 .ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:16px 36px 56px;max-width:1200px;margin:0 auto;}
 .ncard{background:white;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);cursor:pointer;transition:all 0.2s;border-left:5px solid var(--red);}
 .ncard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(217,30,30,0.18);}
@@ -64,6 +130,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .lider-chip{font-size:11px;color:#888;margin-top:2px;margin-bottom:6px;}
 .lider-chip strong{color:var(--red);}
 
+/* ── PÁGINA INTERNA ──────────────────────────────── */
 .nheader{background:linear-gradient(135deg,#1a1a1a,#2d0a0a);color:white;padding:34px 36px;}
 .breadcrumb{font-size:11px;color:rgba(255,255,255,0.5);margin-bottom:14px;display:flex;align-items:center;gap:6px;}
 .breadcrumb span{cursor:pointer;transition:color 0.2s;}
@@ -76,6 +143,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 
 .ncontent{padding:32px 24px;max-width:1180px;margin:0 auto;}
 
+/* ── FICHA ───────────────────────────────────────── */
 .ficha{background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--mid);margin-bottom:20px;}
 .ficha-header{background:var(--dark);color:white;padding:16px 22px;}
 .ficha-header h4{font-size:14px;font-weight:700;}
@@ -96,6 +164,7 @@ nav button:hover,nav button.active{background:var(--red);border-color:var(--red)
 .dtable th{background:var(--dark);color:white;padding:8px 10px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;}
 .dtable td{padding:5px 4px;border-bottom:1px solid var(--mid);}
 .dtable input,.dtable select{width:100%;border:1px solid var(--mid);border-radius:4px;padding:5px 7px;font-size:12px;font-family:inherit;outline:none;transition:border-color 0.2s;}
+.dtable input[type=checkbox]{width:auto;accent-color:var(--red);}
 .dtable input:focus,.dtable select:focus{border-color:var(--red);}
 .btn-rm{background:#fee;border:1px solid #fdd;color:var(--red);border-radius:4px;padding:3px 7px;cursor:pointer;font-size:11px;font-family:inherit;}
 .btn-add-row{background:var(--gray);border:1px dashed #ccc;color:#666;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-family:inherit;margin-top:6px;transition:all 0.2s;width:100%;text-align:center;}
@@ -140,7 +209,14 @@ footer span{color:var(--red);}
 
 @media(max-width:1100px){.fgrid{grid-template-columns:1fr 1fr;}}
 @media(max-width:900px){.fgrid{grid-template-columns:1fr;}}
-@media(max-width:700px){header{padding:12px 16px;}nav{display:none;}.hero{padding:44px 18px 36px;}.hero h1{font-size:24px;}.igrid,.ngrid{padding:16px;}.ncontent{padding:18px;}}
+@media(max-width:700px){
+  header{padding:12px 16px;}
+  nav{display:none;}
+  .hero{padding:40px 20px;min-height:260px;}
+  .hero h1{font-size:22px;}
+  .igrid,.ngrid{padding:16px;}
+  .ncontent{padding:18px;}
+}
 </style>
 </head>
 <body>
@@ -163,24 +239,28 @@ footer span{color:var(--red);}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
+
   <div class="hero">
-    <div class="hero-logo"><img src="logo-lr.png" alt="LR"/></div>
-    <h1>Cultura <span>LR Marketing</span></h1>
-    <p>Nossa cultura não é só falada — ela é vivida, organizada e construída por cada um de nós.</p>
-    <div class="badge">✦ Propósito: Ser Foda ✦</div>
+    <div class="hero-content">
+      <div class="hero-logo"><img src="logo-lr.png" alt="LR"/></div>
+      <h1>Cultura <span>LR Marketing</span></h1>
+      <p>Pessoas em movimento, olhares para o futuro e uma cultura viva que conecta propósito, entrega e crescimento.</p>
+      <div class="badge">✦ Ser Foda é sobre Gente · Futuro · Ação ✦</div>
+    </div>
   </div>
+
   <div class="igrid">
     <div class="icard"><div class="ico">🎯</div><h3>Missão</h3><p>Ser agência omnichannel para médias e grandes empresas corporativas, facilitando processos de marketing estratégico como um braço terceirizado de alto desempenho.</p></div>
     <div class="icard"><div class="ico">🔭</div><h3>Visão</h3><p>Ser a melhor empresa de marketing estratégico do interior de São Paulo — referência em resultado, relacionamento e inovação.</p></div>
     <div class="icard"><div class="ico">💎</div><h3>Valores</h3><ul><li>Respeito nas relações</li><li>Comprometimento real com os resultados</li><li>Responsabilidade com o negócio do cliente</li><li>Ética profissional</li><li>Agir com verdade</li></ul></div>
     <div class="icard icard-dark"><div class="ico">🔥</div><h3>Propósito</h3><div class="prop-text">Ser Foda.</div><p>Entregar o melhor, sempre. Superar expectativas. Deixar marca.</p></div>
   </div>
-  <div class="sec-title"><h2>Nossos <span>Núcleos</span></h2><p>Clique em um núcleo para acessar e preencher sua ficha completa.</p></div>
-  <div class="ngrid">
 
+  <div class="sec-title"><h2>Nossos <span>Núcleos</span></h2><p>Clique em um núcleo para acessar e preencher sua ficha completa.</p></div>
+
+  <div class="ngrid">
     <div class="ncard" onclick="goPage('ai')">
-      <div class="nico">🤖</div>
-      <h3>Núcleo AI</h3>
+      <div class="nico">🤖</div><h3>Núcleo AI</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-ai">A definir</strong></div>
       <p>Aplicação de IA no dia a dia da LR para elevar produtividade e qualidade.</p>
       <div class="nstats">
@@ -190,10 +270,8 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-ai" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-ai">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('digital')">
-      <div class="nico">📱</div>
-      <h3>Digital LR</h3>
+      <div class="nico">📱</div><h3>Digital LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-digital">A definir</strong></div>
       <p>Fortalecer toda a frente digital da LR Marketing.</p>
       <div class="nstats">
@@ -203,10 +281,8 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-digital" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-digital">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('insight')">
-      <div class="nico">💡</div>
-      <h3>Insight LR</h3>
+      <div class="nico">💡</div><h3>Insight LR</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-insight">A definir</strong></div>
       <p>Inteligência estratégica e geração de insights para clientes e LR.</p>
       <div class="nstats">
@@ -216,10 +292,8 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-insight" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-insight">0% concluído</div>
     </div>
-
     <div class="ncard" onclick="goPage('processo')">
-      <div class="nico">⚙️</div>
-      <h3>Processo | Comunicação</h3>
+      <div class="nico">⚙️</div><h3>Processo | Comunicação</h3>
       <div class="lider-chip">👤 Líder: <strong id="dash-lider-processo">A definir</strong></div>
       <p>Padronizar processos e melhorar comunicação interna.</p>
       <div class="nstats">
@@ -229,8 +303,8 @@ footer span{color:var(--red);}
       <div class="prog"><div class="prog-fill" id="dash-prog-processo" style="width:0%"></div></div>
       <div class="prog-label" id="dash-pct-processo">0% concluído</div>
     </div>
-
   </div>
+
 </div>
 
 <!-- NUCLEO AI -->
@@ -267,7 +341,6 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" id="f-ai-coment" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
-
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
               <div style="overflow-x:auto"><table class="dtable" id="team-ai">
@@ -284,7 +357,6 @@ footer span{color:var(--red);}
               <button class="btn-add-row" onclick="addChecklist('proj-ai')">+ Adicionar item</button>
             </div>
           </div>
-
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
               <div style="overflow-x:auto"><table class="dtable" id="rec-ai">
@@ -303,13 +375,9 @@ footer span{color:var(--red);}
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="saveFicha('ai')">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('ai')">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
@@ -348,7 +416,6 @@ footer span{color:var(--red);}
               <div class="field"><label>Comentário</label><textarea rows="2" id="f-digital-coment" placeholder="Como está o andamento?"></textarea></div>
             </div>
           </div>
-
           <div class="fcol">
             <div class="fsec"><h5>2. Equipe</h5>
               <div style="overflow-x:auto"><table class="dtable" id="team-digital"><thead><tr><th>Nome</th><th>Papel</th><th></th></tr></thead><tbody></tbody></table></div>
@@ -359,7 +426,6 @@ footer span{color:var(--red);}
               <button class="btn-add-row" onclick="addChecklist('proj-digital')">+ Adicionar item</button>
             </div>
           </div>
-
           <div class="fcol">
             <div class="fsec"><h5>4. Recursos</h5>
               <div style="overflow-x:auto"><table class="dtable" id="rec-digital"><thead><tr><th>Recurso</th><th>Situação</th><th></th></tr></thead><tbody></tbody></table></div>
@@ -369,20 +435,15 @@ footer span{color:var(--red);}
               <div class="obs-list" id="obs-digital"></div>
               <div class="obs-form">
                 <h6>+ Nova Observação</h6>
-                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2"
-            placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
+                <div class="orow"><div class="field"><label>Situação</label><textarea rows="2" placeholder="Descreva..."></textarea></div><div class="field"><label>Solução</label><textarea rows="2" placeholder="Como resolver..."></textarea></div></div>
                 <div class="orow"><div class="field"><label>Responsável</label><input type="text" placeholder="Nome"/></div><div class="field"><label>Data</label><input type="date"/></div></div>
                 <button class="btn-save" style="margin-top:4px" onclick="addObs('obs-digital',this)">Registrar</button>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="saveFicha('digital')">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('digital')">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
@@ -448,10 +509,7 @@ footer span{color:var(--red);}
           </div>
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="saveFicha('insight')">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('insight')">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
@@ -517,10 +575,7 @@ footer span{color:var(--red);}
           </div>
         </div>
       </div>
-      <div class="ficha-footer">
-        <button class="btn-print" onclick="window.print()">🖨️ Imprimir</button>
-        <button class="btn-save" onclick="saveFicha('processo')">💾 Salvar Ficha</button>
-      </div>
+      <div class="ficha-footer"><button class="btn-print" onclick="window.print()">🖨️ Imprimir</button><button class="btn-save" onclick="saveFicha('processo')">💾 Salvar Ficha</button></div>
     </div>
   </div>
 </div>
@@ -556,15 +611,21 @@ function addTeam(tid){
 function addChecklist(tid){
   const tb=document.querySelector('#'+tid+' tbody');
   const tr=document.createElement('tr');
-  tr.innerHTML='<td><input type="checkbox"/></td><td><input type="text" placeholder="Tarefa"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
+  tr.innerHTML='<td style="text-align:center"><input type="checkbox"/></td><td><input type="text" placeholder="Tarefa"/></td><td><input type="text" placeholder="Responsável"/></td><td><input type="date"/></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
   tb.appendChild(tr);
 }
 
 function addRec(tid){
   const tb=document.querySelector('#'+tid+' tbody');
   const tr=document.createElement('tr');
-  tr.innerHTML='<td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
+  tr.innerHTML='<td><input type="text" placeholder="Ferramenta / recurso"/></td><td><select class="s-att" onchange="cSel(this)"><option>Em análise</option><option>Disponível</option><option>Pendente</option></select></td><td><button class="btn-rm" onclick="rmRow(this)">✕</button></td>';
   tb.appendChild(tr);
+}
+
+function cSel(el){
+  el.className='s-att';
+  if(el.value==='Disponível')el.className='s-ok';
+  if(el.value==='Pendente')el.className='s-no';
 }
 
 function addObs(listId,btn){
@@ -681,7 +742,9 @@ function loadFicha(id){
     const last=rows[rows.length-1];
     const cols=last.querySelectorAll('td');
     cols[0].querySelector('input').value=r.nome;
-    cols[1].querySelector('select').value=r.status;
+    const sel=cols[1].querySelector('select');
+    sel.value=r.status;
+    cSel(sel);
   });
 }
 
